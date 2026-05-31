@@ -20,7 +20,7 @@ export default function About() {
         <p>Développé par <strong>Koffi Lévis</strong>.</p>
         <p>Contact : <a href="mailto:koffilevis21@gmail.com">koffilevis21@gmail.com</a></p>
         <p>Projet open source disponible sur <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-        <p>Documentation : <a href="https://scaffold-docs.vercel.app" target="_blank" rel="noopener noreferrer">scaffold-docs.vercel.app</a></p>
+        <p>Documentation : <a href="https://scaffolder.vercel.app" target="_blank" rel="noopener noreferrer">scaffolder.vercel.app</a></p>
       </section>
 
       <section>

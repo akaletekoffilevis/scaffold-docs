@@ -104,7 +104,7 @@ export default function Landing() {
       </section>
 
       <footer>
-        <p>Scaffolder — CLI de génération de projets — <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer">GitHub</a> — <a href="https://scaffold-docs.vercel.app" target="_blank" rel="noopener noreferrer">Documentation</a></p>
+        <p>Scaffolder — CLI de génération de projets — <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer">GitHub</a> — <a href="https://scaffolder.vercel.app" target="_blank" rel="noopener noreferrer">Documentation</a></p>
       </footer>
     </div>
   )
