@@ -2,91 +2,92 @@ function copyText(text: string) {
   navigator.clipboard.writeText(text)
 }
 
-function DeploySection({ title, prep, cmd, tips }: { title: string; prep: string[]; cmd: string; tips: string[] }) {
-  return (
-    <div className="deploy-section">
-      <h2>{title}</h2>
-      <h3>Prérequis</h3>
-      <ul>
-        {prep.map((p, i) => <li key={i}>{p}</li>)}
-      </ul>
-      <h3>Commande de déploiement</h3>
-      <div className="install-cmd">
-        <code>{cmd}</code>
-        <button className="btn-copy" onClick={() => copyText(cmd)}>Copier</button>
-      </div>
-      <h3>Conseils</h3>
-      <ul>
-        {tips.map((t, i) => <li key={i}>{t}</li>)}
-      </ul>
-    </div>
-  )
-}
-
 export default function Deployment() {
   return (
     <div className="page-content">
       <h1>Déploiement</h1>
-      <p>Scaffolder peut déployer votre projet sur plusieurs plateformes avec une seule commande.</p>
+      <p>Scaffolder peut déployer votre projet sur plusieurs plateformes avec une seule commande. La détection automatique identifie la plateforme selon les fichiers présents dans votre projet.</p>
 
-      <DeploySection
-        title="Vercel"
-        prep={[
-          'Un compte Vercel',
-          'Projet frontend (Vite, Next.js, React, Vue)',
-          'GitHub repository connecté (optionnel)'
-        ]}
-        cmd="scaffold deploy --target=vercel --prod"
-        tips={[
-          'Scaffolder détecte automatiquement Vercel si un fichier vercel.json existe',
-          'Ajoutez --prod pour déployer en production',
-          'Vercel détecte automatiquement le framework utilisé'
-        ]}
-      />
+      <h2>Vercel</h2>
+      <p>Idéal pour les applications frontend (Next.js, Vite, React, Vue) et les API serverless.</p>
+      <h3>Prérequis</h3>
+      <ul>
+        <li>Un compte Vercel (gratuit)</li>
+        <li>Projet frontend généré avec Scaffolder (vite, next, react, vue, nuxt)</li>
+        <li><code>vercel.json</code> généré automatiquement ou manuellement</li>
+      </ul>
+      <h3>Commande</h3>
+      <div className="install-cmd">
+        <code>scaffold deploy --target=vercel --prod</code>
+        <button className="btn-copy" onClick={() => copyText('scaffold deploy --target=vercel --prod')}>Copier</button>
+      </div>
+      <h3>Options</h3>
+      <ul>
+        <li><code>--prod</code> : Déploiement en production (sans, c'est un déploiement preview)</li>
+        <li>Scaffolder détecte automatiquement Vercel si <code>vercel.json</code> existe</li>
+      </ul>
 
-      <DeploySection
-        title="Railway"
-        prep={[
-          'Un compte Railway',
-          'Projet backend (API, web service)',
-          'Railway CLI installé (optionnel)'
-        ]}
-        cmd="scaffold deploy --target=railway"
-        tips={[
-          'Railway supporte .NET, Node.js, Python, Go, Rust',
-          'Scaffolder génère un railway.json si nécessaire',
-          'Les variables d\'environnement sont configurables via le dashboard Railway'
-        ]}
-      />
+      <h2>Railway</h2>
+      <p>Parfait pour les APIs et backends. Supporte .NET, Node.js, Python, Go, Rust.</p>
+      <h3>Prérequis</h3>
+      <ul>
+        <li>Un compte Railway (gratuit)</li>
+        <li>Projet backend généré avec Scaffolder</li>
+        <li>Railway CLI installé (optionnel)</li>
+      </ul>
+      <h3>Commande</h3>
+      <div className="install-cmd">
+        <code>scaffold deploy --target=railway</code>
+        <button className="btn-copy" onClick={() => copyText('scaffold deploy --target=railway')}>Copier</button>
+      </div>
+      <h3>Configuration</h3>
+      <p>Scaffolder génère un fichier <code>railway.json</code> si nécessaire. Les variables d'environnement sont configurables via le dashboard Railway ou via <code>scaffold config</code>.</p>
 
-      <DeploySection
-        title="Docker"
-        prep={[
-          'Docker installé sur la machine',
-          'Projet généré avec scaffold docker --type=...'
-        ]}
-        cmd="scaffold deploy --target=docker"
-        tips={[
-          'Construit l\'image Docker localement',
-          'Utilise le Dockerfile généré par scaffold docker',
-          'Tag et run le conteneur automatiquement'
-        ]}
-      />
+      <h2>Docker</h2>
+      <p>Déploiement local avec Docker. Utilise le Dockerfile généré par <code>scaffold docker</code>.</p>
+      <h3>Prérequis</h3>
+      <ul>
+        <li>Docker installé sur la machine</li>
+        <li>Dockerfile généré avec <code>scaffold docker --type=...</code></li>
+      </ul>
+      <h3>Commande</h3>
+      <div className="install-cmd">
+        <code>scaffold deploy --target=docker</code>
+        <button className="btn-copy" onClick={() => copyText('scaffold deploy --target=docker')}>Copier</button>
+      </div>
+      <h3>Étapes</h3>
+      <ol>
+        <li>Construit l'image Docker localement</li>
+        <li>Utilise le Dockerfile généré par <code>scaffold docker</code></li>
+        <li>Tag et run le conteneur automatiquement</li>
+      </ol>
 
-      <DeploySection
-        title="GitHub Pages"
-        prep={[
-          'Un dépôt GitHub',
-          'Projet frontend (site statique)',
-          'Git configuré'
-        ]}
-        cmd="scaffold deploy --target=github-pages"
-        tips={[
-          'Scaffolder pousse le build sur la branche gh-pages',
-          'Configure automatiquement GitHub Pages dans les settings du dépôt',
-          'Utilisez scaffold github actions pour ajouter une CI de déploiement automatique'
-        ]}
-      />
+      <h2>GitHub Pages</h2>
+      <p>Pour les sites statiques et documentations.</p>
+      <h3>Prérequis</h3>
+      <ul>
+        <li>Un dépôt GitHub</li>
+        <li>Projet frontend (site statique)</li>
+        <li>Git configuré</li>
+      </ul>
+      <h3>Commande</h3>
+      <div className="install-cmd">
+        <code>scaffold deploy --target=github-pages</code>
+        <button className="btn-copy" onClick={() => copyText('scaffold deploy --target=github-pages')}>Copier</button>
+      </div>
+      <h3>Fonctionnement</h3>
+      <ul>
+        <li>Scaffolder pousse le build sur la branche <code>gh-pages</code></li>
+        <li>Configure automatiquement GitHub Pages dans les settings du dépôt</li>
+        <li>Utilisez <code>scaffold github actions</code> pour ajouter une CI de déploiement automatique</li>
+      </ul>
+
+      <h2>Déploiement automatique</h2>
+      <p>Sans argument, <code>scaffold deploy</code> détecte automatiquement la plateforme cible selon les fichiers présents :</p>
+      <div className="install-cmd">
+        <code>scaffold deploy</code>
+        <button className="btn-copy" onClick={() => copyText('scaffold deploy')}>Copier</button>
+      </div>
     </div>
   )
 }

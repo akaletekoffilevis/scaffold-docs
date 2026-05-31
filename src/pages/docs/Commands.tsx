@@ -23,7 +23,7 @@ export default function Commands() {
   return (
     <div className="page-content">
       <h1>Référence des commandes</h1>
-      <p>Recherchez et explorez les 40+ commandes disponibles.</p>
+      <p>Les 40+ commandes de Scaffolder sont organisées en 9 catégories. Utilisez la recherche pour trouver rapidement une commande.</p>
 
       <div className="search-box">
         <input
@@ -42,6 +42,14 @@ export default function Commands() {
           ))}
         </div>
       ))}
+
+      <h2>Conseils d'utilisation</h2>
+      <ul>
+        <li>Utilisez <code>scaffold --help</code> pour voir l'aide générale</li>
+        <li>Ajoutez <code>--help</code> à n'importe quelle commande pour ses options spécifiques : <code>scaffold new --help</code></li>
+        <li>Utilisez <code>scaffold doctor</code> pour vérifier votre environnement</li>
+        <li>Activez l'auto-complétion shell : <code>scaffold completion bash</code></li>
+      </ul>
     </div>
   )
 }

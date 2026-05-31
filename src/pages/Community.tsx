@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ContactForm from '../components/ContactForm'
 
 export default function Community() {
   return (
@@ -9,16 +10,16 @@ export default function Community() {
       <h2>Où nous trouver</h2>
       <div className="grid">
         <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: 'none' }}>
-          <h3>Dépôt GitHub</h3>
-          <p>Code source, releases, et documentation technique. Suivez le développement en direct.</p>
+          <h3>Depot GitHub</h3>
+          <p>Code source, releases, et documentation technique. Suivez le developpement en direct.</p>
         </a>
         <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/issues" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: 'none' }}>
           <h3>Issues</h3>
-          <p>Signalez des bugs, proposez des fonctionnalités, suivez le développement.</p>
+          <p>Signalez des bugs, proposez des fonctionnalites, suivez le developpement.</p>
         </a>
         <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/discussions" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: 'none' }}>
           <h3>Discussions GitHub</h3>
-          <p>Posez des questions, partagez vos projets, échangez avec la communauté.</p>
+          <p>Posez des questions, partagez vos projets, echangez avec la communaute.</p>
         </a>
         <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: 'none' }}>
           <h3>Guide de contribution</h3>
@@ -31,16 +32,18 @@ export default function Community() {
       <ul>
         <li>Ouvrir une <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/issues" target="_blank" rel="noopener noreferrer">issue GitHub</a></li>
         <li>Rejoindre les <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/discussions" target="_blank" rel="noopener noreferrer">discussions GitHub</a></li>
-        <li>Envoyer un email à <a href="mailto:koffilevis21@gmail.com">koffilevis21@gmail.com</a></li>
         <li>Utiliser la commande <code>scaffold bug</code> dans le terminal</li>
+        <li>M'ecrire directement via le formulaire ci-dessous</li>
       </ul>
+
+      <ContactForm />
 
       <h2>Bonnes pratiques communautaires</h2>
       <ul>
-        <li>Soyez respectueux et inclusif dans vos échanges</li>
+        <li>Soyez respectueux et inclusif dans vos echanges</li>
         <li>Cherchez dans les issues existantes avant d'en ouvrir une nouvelle</li>
         <li>Fournissez un maximum de contexte dans vos rapports de bug</li>
-        <li>Partagez vos templates et plugins avec la communauté</li>
+        <li>Partagez vos templates et plugins avec la communaute</li>
       </ul>
 
       <p><Link to="/contributing">Envie de contribuer ? Consultez notre guide.</Link></p>

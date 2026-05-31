@@ -172,6 +172,8 @@ a:hover { text-decoration: underline; }
 .docs-content p { margin-bottom: 16px; color: var(--text2); line-height: 1.7; }
 .docs-content ul, .docs-content ol { margin: 0 0 16px 20px; color: var(--text2); }
 .docs-content li { margin-bottom: 4px; }
+.lead { font-size: 1.1rem; color: var(--text2); margin-bottom: 32px; line-height: 1.7; }
+
 .docs-content code {
   font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
   font-size: .85em;
@@ -262,6 +264,44 @@ a:hover { text-decoration: underline; }
 .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .card p { color: var(--text2); font-size: .9rem; line-height: 1.5; }
 
+/* === Contact Form === */
+.contact-form {
+  max-width: 600px;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: .95rem;
+  outline: none;
+  transition: border-color .2s;
+  font-family: inherit;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text2);
+}
+.contact-form .btn {
+  align-self: flex-start;
+}
+
 /* === Stats === */
 .stats-bar {
   display: flex;
@@ -321,15 +361,15 @@ a:hover { text-decoration: underline; }
 }
 .btn-copy:hover { background: var(--border); color: var(--text); }
 
-/* === Command accordion === */
-.cmd-detail {
+/* === Command accordion / FAQ accordion === */
+.cmd-accordion, .cmd-detail {
   border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; overflow: hidden;
 }
-.cmd-detail-header {
+.cmd-header, .cmd-detail-header {
   display: flex; align-items: center; gap: 12px; padding: 14px 16px;
   background: var(--bg2); cursor: pointer; user-select: none; flex-wrap: wrap;
 }
-.cmd-detail-header:hover { background: var(--bg3); }
+.cmd-header:hover, .cmd-detail-header:hover { background: var(--bg3); }
 .cmd-syntax {
   flex: 1; font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
   font-size: .8rem; color: var(--accent2); min-width: 0; word-break: break-all;
@@ -340,15 +380,15 @@ a:hover { text-decoration: underline; }
   color: var(--text2); border: 1px solid var(--border); white-space: nowrap;
 }
 .cmd-arrow { font-size: .8rem; color: var(--text2); transition: transform .2s; }
-.cmd-detail.open .cmd-arrow { transform: rotate(180deg); }
-.cmd-detail-body { display: none; padding: 0 16px 16px; border-top: 1px solid var(--border); background: var(--bg); }
-.cmd-detail.open .cmd-detail-body { display: block; }
-.cmd-detail-body p { margin: 16px 0; color: var(--text2); font-size: .9rem; }
-.cmd-detail-body h4 { font-size: .9rem; color: var(--accent); margin: 16px 0 8px; }
-.cmd-detail-body table { width: 100%; border-collapse: collapse; font-size: .85rem; }
-.cmd-detail-body td { padding: 6px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
-.cmd-detail-body td:first-child { font-family: monospace; color: var(--accent2); white-space: nowrap; width: 180px; }
-.cmd-detail-body td:last-child { color: var(--text2); }
+.cmd-accordion.open .cmd-arrow, .cmd-detail.open .cmd-arrow { transform: rotate(180deg); }
+.cmd-body, .cmd-detail-body { display: none; padding: 0 16px 16px; border-top: 1px solid var(--border); background: var(--bg); }
+.cmd-accordion.open .cmd-body, .cmd-detail.open .cmd-detail-body { display: block; }
+.cmd-body p, .cmd-detail-body p { margin: 16px 0; color: var(--text2); font-size: .9rem; }
+.cmd-body h4, .cmd-detail-body h4 { font-size: .9rem; color: var(--accent); margin: 16px 0 8px; }
+.cmd-body table, .cmd-detail-body table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.cmd-body td, .cmd-detail-body td { padding: 6px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.cmd-body td:first-child, .cmd-detail-body td:first-child { font-family: monospace; color: var(--accent2); white-space: nowrap; width: 180px; }
+.cmd-body td:last-child, .cmd-detail-body td:last-child { color: var(--text2); }
 
 /* === Search === */
 .search-box { margin-bottom: 24px; }
@@ -426,6 +466,30 @@ a:hover { text-decoration: underline; }
   .stats-bar { gap: 24px; padding: 40px 16px; }
   .stat-value { font-size: 1.6rem; }
   .section { padding: 60px 16px; }
+}
+
+/* === Template Grid === */
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.template-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: border-color .2s;
+}
+.template-card:hover { border-color: var(--accent); }
+.template-card h3 { font-family: monospace; font-size: 1rem; margin-bottom: 6px; color: var(--accent2); }
+.template-card p { color: var(--text2); font-size: .85rem; margin-bottom: 10px; line-height: 1.5; }
+.template-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+.tag {
+  font-size: .7rem; padding: 2px 8px; border-radius: 4px;
+  background: var(--accent-glow); color: var(--accent);
+  border: 1px solid transparent;
 }
 
 /* === Logo gallery === */
