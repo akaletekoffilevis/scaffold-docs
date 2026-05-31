@@ -57,7 +57,8 @@ export default function Landing() {
         <div className="stats-bar">
           <div className="stat"><strong>40+</strong> commandes</div>
           <div className="stat"><strong>12 MB</strong> AOT</div>
-          <div className="stat"><strong>8</strong> plateformes</div>
+          <div className="stat"><strong>7</strong> plateformes</div>
+          <div className="stat"><strong>18</strong> templates</div>
           <div className="stat"><strong>Open Source</strong></div>
         </div>
       </section>
@@ -74,6 +75,13 @@ export default function Landing() {
           <span className="badge">Laravel</span>
           <span className="badge">Symfony</span>
           <span className="badge">Rails</span>
+          <span className="badge">Ruby</span>
+          <span className="badge">Dart</span>
+          <span className="badge">PHP</span>
+          <span className="badge">Swift</span>
+          <span className="badge">Kotlin</span>
+          <span className="badge">Java</span>
+          <span className="badge">Zig</span>
         </div>
       </section>
 
@@ -96,7 +104,7 @@ export default function Landing() {
       </section>
 
       <footer>
-        <p>Scaffolder — CLI de génération de projets — <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer">GitHub</a> — <Link to="/docs">Documentation</Link></p>
+        <p>Scaffolder — CLI de génération de projets — <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer">GitHub</a> — <a href="https://scaffold-docs.vercel.app" target="_blank" rel="noopener noreferrer">Documentation</a></p>
       </footer>
     </div>
   )

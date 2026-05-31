@@ -6,13 +6,14 @@ export default function Contributing() {
   return (
     <div className="page-content">
       <h1>Contribuer</h1>
-      <p>Scaffolder est un projet open source. Toute contribution est la bienvenue !</p>
+      <p>Scaffolder est un projet open source. Toute contribution est la bienvenue ! Que vous soyez développeur débutant ou expérimenté, il y a une place pour vous.</p>
 
       <h2>Prérequis</h2>
       <ul>
         <li>.NET 9 SDK installé</li>
         <li>Git</li>
-        <li>Un éditeur de code (VS Code, Rider, etc.)</li>
+        <li>Un éditeur de code (VS Code, Rider, Visual Studio)</li>
+        <li>Un compte GitHub</li>
       </ul>
 
       <h2>Étapes</h2>
@@ -55,15 +56,19 @@ cd Scaffolder-CLI</code>
 
       <h2>Types de contributions</h2>
       <ul>
-        <li><strong>Code :</strong> Nouvelles commandes, améliorations, correctifs</li>
-        <li><strong>Templates :</strong> Nouveaux templates de projet</li>
-        <li><strong>Documentation :</strong> Amélioration du README, du site, des messages d'aide</li>
+        <li><strong>Code :</strong> Nouvelles commandes, améliorations, correctifs de bugs</li>
+        <li><strong>Templates :</strong> Nouveaux templates de projet pour n'importe quel langage</li>
+        <li><strong>Documentation :</strong> Amélioration du README, du site web, des messages d'aide</li>
         <li><strong>Plugins :</strong> Plugins shell pour la communauté</li>
         <li><strong>Tests :</strong> Ajout de tests unitaires et d'intégration</li>
-        <li><strong>Traductions :</strong> Support multilingue</li>
+        <li><strong>Traductions :</strong> Support multilingue pour l'interface et la documentation</li>
+        <li><strong>IA :</strong> Amélioration des prompts et des modèles supportés</li>
       </ul>
 
-      <p>Merci de contribuer à Scaffolder ! 🚀</p>
+      <h2>Contact</h2>
+      <p>Une question sur la contribution ? Envoyez un email à <a href="mailto:koffilevis21@gmail.com">koffilevis21@gmail.com</a> ou ouvrez une <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/discussions" target="_blank" rel="noopener noreferrer">discussion GitHub</a>.</p>
+
+      <p>Merci de contribuer à Scaffolder !</p>
     </div>
   )
 }

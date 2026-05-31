@@ -75,7 +75,8 @@ export default function FAQ() {
         </div>
       ))}
 
-      <p>Une question ? Ouvrez une <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/discussions" target="_blank" rel="noopener noreferrer">discussion GitHub</a>.</p>
+      <h2>Vous avez une autre question ?</h2>
+      <p>Contactez-nous par email à <a href="mailto:koffilevis21@gmail.com">koffilevis21@gmail.com</a> ou ouvrez une <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/discussions" target="_blank" rel="noopener noreferrer">discussion GitHub</a>.</p>
     </div>
   )
 }
