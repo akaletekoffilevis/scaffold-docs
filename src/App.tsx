@@ -20,6 +20,7 @@ function Nav() {
           <li><a href="#commands">Commandes</a></li>
           <li><a href="#examples">Exemples</a></li>
           <li><a href="#bug">Signaler un bug</a></li>
+          <li><a href="#logos">Logo</a></li>
         </ul>
       </div>
     </nav>
@@ -243,6 +244,30 @@ function BugSection() {
   )
 }
 
+function Logos() {
+  const variants = [
+    { file: 'logo.svg', name: 'Principal', desc: 'Sombre, bleu-violet, avec échafaudage et curseur animé' },
+    { file: 'logo-minimal.svg', name: 'Minimal', desc: 'Sombre, vert-bleu, épuré — utilisé dans la navigation' },
+    { file: 'logo-neon.svg', name: 'Neon', desc: 'Violet-rose néon avec particules flottantes' },
+    { file: 'logo-light.svg', name: 'Light', desc: 'Fond clair, bleu — pour les interfaces claires' },
+    { file: 'logo-horizontal.svg', name: 'Horizontal', desc: 'Avec texte, pour les README et en-têtes' },
+  ]
+  return (
+    <section id="logos">
+      <h2>Variantes du logo</h2>
+      <div className="grid">
+        {variants.map((v, i) => (
+          <div className="card" key={i} style={{ textAlign: 'center' }}>
+            <img src={`/${v.file}`} alt={v.name} style={{ maxWidth: '100%', height: 120, marginBottom: 12 }} />
+            <h3>{v.name}</h3>
+            <p style={{ fontSize: '.85rem' }}>{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function Footer() {
   return (
     <footer>
@@ -261,6 +286,7 @@ export default function App() {
       <CommandRef />
       <Examples />
       <BugSection />
+      <Logos />
       <Footer />
     </>
   )
