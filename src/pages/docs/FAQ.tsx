@@ -83,6 +83,11 @@ const faqs = [
     cmd: 'scaffold completion bash > /etc/bash_completion.d/scaffold'
   },
   {
+    q: 'Quels shells sont supportés pour l\'auto-complétion ?',
+    a: 'bash, zsh, fish, powershell. Générez le script adapté à votre shell :',
+    cmd: 'scaffold completion zsh > /usr/local/share/zsh/site-functions/_scaffold'
+  },
+  {
     q: 'Comment générer une licence pour mon projet ?',
     a: 'Scaffolder supporte 10 types de licences :',
     cmd: 'scaffold license mit'
@@ -106,6 +111,11 @@ const faqs = [
   {
     q: 'Quels sont les prérequis système ?',
     a: 'Aucun runtime requis. Scaffolder est compilé en binaire natif AOT. Il fonctionne sur Linux (x64, arm64, musl), macOS (Intel, Apple Silicon) et Windows (x64, x86).',
+    cmd: null
+  },
+  {
+    q: 'Quelle est la taille du binaire ?',
+    a: '~12 MB en moyenne selon la plateforme. Grâce à la compilation AOT, pas de runtime .NET nécessaire.',
     cmd: null
   },
   {
@@ -139,6 +149,36 @@ const faqs = [
     a: 'Créez un site statique avec tous vos templates pour les partager :',
     cmd: 'scaffold store --output=./mon-marketplace --publish'
   },
+  {
+    q: 'Comment initialiser un projet complet rapidement ?',
+    a: 'La commande init configure Docker, CI, GitHub, .env et .gitignore en une étape :',
+    cmd: 'scaffold init'
+  },
+  {
+    q: 'Comment lancer l\'interface web locale ?',
+    a: 'Scaffolder inclut un serveur HTTP intégré avec interface web interactive :',
+    cmd: 'scaffold ui --port=3000'
+  },
+  {
+    q: 'Comment migrer un projet d\'un template à un autre ?',
+    a: 'Migrez la structure tout en préservant le code personnalisé :',
+    cmd: 'scaffold migrate webapi blazor --path=./mon-projet'
+  },
+  {
+    q: 'Comment regarder un dossier et re-générer automatiquement ?',
+    a: 'Utilisez le mode watch pour le développement en temps réel :',
+    cmd: 'scaffold watch webapi --name=mon-api --watch-dir=./src'
+  },
+  {
+    q: 'Quels outils sont vérifiés par scaffold doctor ?',
+    a: 'dotnet, node, npm, cargo, rustc, go, python, flutter, docker, git, gh. Selon votre OS et vos projets.',
+    cmd: null
+  },
+  {
+    q: 'Comment exporter/importer ma configuration ?',
+    a: 'Sauvegardez ou transférez votre configuration entre machines :',
+    cmd: 'scaffold config export ~/scaffold-config.json'
+  },
 ]
 
 export default function FAQ() {
@@ -153,7 +193,7 @@ export default function FAQ() {
   return (
     <div className="page-content">
       <h1>FAQ</h1>
-      <p>Plus de 25 questions fréquentes sur Scaffolder. Utilisez la recherche pour trouver rapidement une réponse.</p>
+      <p>Plus de 30 questions fréquentes sur Scaffolder. Utilisez la recherche pour trouver rapidement une réponse.</p>
 
       <div className="search-box">
         <input

@@ -99,6 +99,42 @@ export default function AI() {
         <button className="btn-copy" onClick={() => copyText('scaffold generate "blog avec react tailwind et cms"')}>Copier</button>
       </div>
 
+      <h2>Gestion des erreurs API</h2>
+      <p>Lorsque l'IA ne répond pas correctement, Scaffolder affiche des messages d'erreur explicites :</p>
+      <table>
+        <thead>
+          <tr><th>Erreur</th><th>Cause possible</th><th>Solution</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>API key not configured</code></td><td>Clé API manquante</td><td>Exécutez <code>scaffold config set apiKey &lt;votre_cle&gt;</code></td></tr>
+          <tr><td><code>Rate limit exceeded</code></td><td>Quota API dépassé</td><td>Attendez quelques minutes ou changez de fournisseur</td></tr>
+          <tr><td><code>Provider unavailable</code></td><td>Service temporairement indisponible</td><td>Essayez un autre fournisseur avec <code>scaffold config set provider</code></td></tr>
+          <tr><td><code>Model not found</code></td><td>Modèle inexistant ou déprécié</td><td>Vérifiez le modèle avec <code>scaffold config get model</code></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Conseils pour les prompts</h2>
+      <ul>
+        <li><strong>Soyez précis</strong> : <code>"blog avec react et tailwind"</code> est mieux que <code>"blog"</code></li>
+        <li><strong>Mentionnez le langage</strong> : <code>"api en python"</code> plutôt que <code>"api"</code></li>
+        <li><strong>Ajoutez des contraintes</strong> : <code>"api rest avec postgres et authentification jwt"</code></li>
+        <li><strong>Pour les corrections</strong> : copiez-collez le message d'erreur exact, pas une paraphrase</li>
+        <li><strong>Pour les explications</strong> : demandez des exemples concrets <code>"explain solid principles avec exemples c#"</code></li>
+      </ul>
+
+      <h2>Limites et quotas</h2>
+      <table>
+        <thead>
+          <tr><th>Provider</th><th>Modèle gratuit</th><th>Limites</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>OpenAI</td><td>Non (payant)</td><td>~500 req/min (selon plan)</td></tr>
+          <tr><td>Gemini</td><td>Oui (quota généreux)</td><td>60 req/min, 1500 req/jour</td></tr>
+          <tr><td>Grok</td><td>Non (payant)</td><td>~100 req/min</td></tr>
+          <tr><td>Claude</td><td>Non (payant)</td><td>~50 req/min</td></tr>
+        </tbody>
+      </table>
+
       <h2>Diagnostic</h2>
       <p>Utilisez <code>scaffold doctor</code> pour vérifier que tout est correctement configuré :</p>
       <div className="install-cmd">
@@ -106,12 +142,13 @@ export default function AI() {
         <button className="btn-copy" onClick={() => copyText('scaffold doctor')}>Copier</button>
       </div>
 
-      <h2>Conseils</h2>
+      <h2>Conseils généraux</h2>
       <ul>
         <li>Les modèles <strong>gpt-4o-mini</strong> et <strong>claude-3-haiku</strong> sont les plus rapides et économiques</li>
         <li>Pour des explications détaillées, préférez Claude</li>
-        <li>Gemini est gratuit avec un quota généreux</li>
-        <li>Stockez votre clé API en toute sécurité avec <code>scaffold config set apiKey &lt;votre_cle&gt;</code></li>
+        <li>Gemini est gratuit avec un quota généreux, idéal pour les tests</li>
+        <li>Stockez votre clé API en toute sécurité avec <code>scaffold config set apiKey &lt;votre_cle&gt;</code> (elle est chiffrée dans le fichier de config)</li>
+        <li>Exportez votre configuration pour la sauvegarder : <code>scaffold config export ~/scaffold-config.json</code></li>
       </ul>
     </div>
   )
