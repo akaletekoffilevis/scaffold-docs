@@ -513,6 +513,16 @@ export const commands: CommandCategory[] = [
     "category": "Utilitaires",
     "commands": [
       {
+        "search": "version afficher version courante configuree installee",
+        "syntax": "version",
+        "description": "Affiche la version installée de Scaffolder.",
+        "badge": "shell",
+        "options": [],
+        "examples": [
+          "scaffold version"
+        ]
+      },
+      {
         "search": "upgrade mettre a jour scaffolder mise a jour auto-update version",
         "syntax": "upgrade",
         "description": "Vérifie la dernière version disponible sur GitHub et installe la mise à jour automatiquement. Gère les permissions sudo si nécessaire.",
