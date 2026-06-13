@@ -15,7 +15,7 @@ const faqs = [
   {
     q: 'Comment installer une version spécifique ?',
     a: 'Téléchargez directement l\'archive depuis les releases GitHub :',
-    cmd: 'curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.0.0/scaffold-linux-x64.tar.gz'
+    cmd: 'curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.1.0/scaffold-linux-x64.tar.gz'
   },
   {
     q: 'Comment créer un template personnalisé ?',

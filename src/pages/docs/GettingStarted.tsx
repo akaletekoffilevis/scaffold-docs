@@ -15,19 +15,19 @@ export default function GettingStarted() {
 
       <h3>Linux / macOS</h3>
       <div className="install-cmd">
-        <code>curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.0.0/scaffold-linux-x64.tar.gz
+        <code>curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.1.0/scaffold-linux-x64.tar.gz
 tar -xzf scaffold.tar.gz
 sudo mv scaffold /usr/local/bin/
 scaffold version</code>
-        <button className="btn-copy" onClick={() => copyText('curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.0.0/scaffold-linux-x64.tar.gz\ntar -xzf scaffold.tar.gz\nsudo mv scaffold /usr/local/bin/\nscaffold version')}>Copier</button>
+        <button className="btn-copy" onClick={() => copyText('curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.1.0/scaffold-linux-x64.tar.gz\ntar -xzf scaffold.tar.gz\nsudo mv scaffold /usr/local/bin/\nscaffold version')}>Copier</button>
       </div>
 
       <h3>Windows (PowerShell)</h3>
       <div className="install-cmd">
-        <code>curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.0.0/scaffold-win-x64.tar.gz
+        <code>curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.1.0/scaffold-win-x64.tar.gz
 tar -xzf scaffold.tar.gz
 scaffold version</code>
-        <button className="btn-copy" onClick={() => copyText('curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.0.0/scaffold-win-x64.tar.gz\ntar -xzf scaffold.tar.gz\nscaffold version')}>Copier</button>
+        <button className="btn-copy" onClick={() => copyText('curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.1.0/scaffold-win-x64.tar.gz\ntar -xzf scaffold.tar.gz\nscaffold version')}>Copier</button>
       </div>
 
       <p>Plus d'options dans le <Link to="/docs/installation">guide d'installation complet</Link>.</p>

@@ -50,8 +50,11 @@ export default function Roadmap() {
         <li>Support des architectures microservices avec génération de code de communication</li>
       </ul>
 
-      <h2>Terminé (v2.0.0)</h2>
+      <h2>Terminé (v2.1.0)</h2>
       <ul>
+        <li>Assistant interactif type Vite pour <code>scaffold new</code> (4 étapes, validation, résumé, spinner)</li>
+        <li>Message post-génération adapté au template (npm run dev, cargo run, flutter run…)</li>
+        <li>Correction bugs : --fav, parsing JSON, stack wizard, fallback code 42</li>
         <li>40+ commandes couvrant tout le cycle de vie d'un projet</li>
         <li>Compilation AOT en binaire natif ~12 MB</li>
         <li>Auto-update intégré avec détection de plateforme</li>
@@ -65,6 +68,7 @@ export default function Roadmap() {
         <li>Site de documentation complet avec 18 pages</li>
         <li>Génération de marketplace statique</li>
         <li>Génération d'extensions VS Code</li>
+        <li>Homebrew tap officiel</li>
       </ul>
 
       <p>Une suggestion ? Envoyez un email à <a href="mailto:koffilevis21@gmail.com">koffilevis21@gmail.com</a> ou ouvrez une <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/issues" target="_blank" rel="noopener noreferrer">issue GitHub</a>.</p>

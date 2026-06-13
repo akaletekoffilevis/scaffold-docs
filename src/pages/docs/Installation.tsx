@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const GH = 'https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.0.0'
+const GH = 'https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/download/v2.1.0'
 
 const ridDownload: Record<string, { label: string; url: string; ext: string }> = {
   'linux-x64':      { label: 'Linux x64',      url: `${GH}/scaffold-linux-x64.tar.gz`,      ext: '.tar.gz' },

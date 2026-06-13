@@ -4,6 +4,22 @@ export default function Changelog() {
       <h1>Changelog</h1>
 
       <article>
+        <h2>v2.1.0</h2>
+        <p><em>13 juin 2026</em></p>
+        <p>Assistant interactif nouvelle génération, correction de bugs, message post-génération adapté.</p>
+        <ul>
+          <li>Assistant interactif type Vite pour <code>scaffold new</code> : étapes [1/4] à [4/4], validation du nom, résumé + confirmation, spinner de génération</li>
+          <li>Message post-génération adapté au template : <code>npm run dev</code>, <code>cargo run</code>, <code>go run .</code>, <code>flutter run</code>, etc.</li>
+          <li>Correction <code>--fav</code> : devient un vrai flag booléen (était ignoré)</li>
+          <li>Parsing JSON robuste : <code>ConfigCommand</code> et <code>ConfigService</code> utilisent <code>JsonSerializer</code> au lieu de <code>Split(':')</code></li>
+          <li>Assistant stack : déclenchement quand un seul argument est manquant (pas seulement <code>--name</code>)</li>
+          <li>Fallback Hello World : retourne code 42 (warning) au lieu de 0</li>
+          <li>URL logo corrigée : <code>anomalyco/scaffolder</code> → <code>akaletekoffilevis/Scaffolder-CLI</code></li>
+          <li>Plus de <code>Environment.Exit()</code> — annulation propre par retour de valeur</li>
+        </ul>
+      </article>
+
+      <article>
         <h2>v2.0.0</h2>
         <p><em>31 mai 2026</em></p>
         <p>Refonte complète avec 40+ commandes, AOT natif, IA intégrée, site de documentation.</p>
@@ -23,7 +39,6 @@ export default function Changelog() {
           <li>Mise à jour des dépendances (npm, NuGet, Cargo, Go, pip)</li>
           <li>Génération de marketplace statique (<code>scaffold store</code>)</li>
           <li>Génération d'extensions VS Code</li>
-          <li>Génération de licences (MIT, Apache, GPL, etc.)</li>
           <li>Interface web locale (<code>scaffold ui</code>)</li>
           <li>Mode batch pour CI (<code>scaffold batch</code>)</li>
           <li>Mode watch pour développement</li>
@@ -34,7 +49,6 @@ export default function Changelog() {
           <li>Site de documentation complet avec 18 pages</li>
           <li>Homebrew tap officiel</li>
           <li>.NET 9 avec System.CommandLine 2.0.8, zéro warning</li>
-          <li>Assistant interactif type Vite pour <code>scaffold new</code> : étapes [1/4] à [4/4], validation, résumé, spinner de génération, indicateurs clavier</li>
         </ul>
       </article>
 
