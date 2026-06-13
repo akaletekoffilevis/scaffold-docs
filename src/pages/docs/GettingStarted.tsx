@@ -48,13 +48,20 @@ scaffold version</code>
   Dockerfile         # Build multi-stage
   .gitignore`}</pre>
 
-      <h2>Étape 3 : Explorer le menu interactif</h2>
-      <p>Sans arguments, Scaffolder affiche un menu interactif pour choisir un template parmi les 18 disponibles :</p>
+      <h2>Étape 3 : Explorer l'assistant interactif</h2>
+      <p>Sans arguments, Scaffolder lance un assistant interactif en plusieurs étapes (style Vite) :</p>
       <div className="install-cmd">
         <code>scaffold new</code>
         <button className="btn-copy" onClick={() => copyText('scaffold new')}>Copier</button>
       </div>
-      <p>Utilisez les flèches pour naviguer, Entrée pour sélectionner, et suivez les invites pour configurer votre projet. Vous pouvez choisir le template, le nom, et même combiner plusieurs templates.</p>
+      <p>L'assistant vous guide étape par étape :</p>
+      <ol>
+        <li><strong>[1/4] Nom du projet</strong> — saisie avec validation</li>
+        <li><strong>[2/4] Type de projet</strong> — Hello World, Framework complet ou Stack fullstack</li>
+        <li><strong>[3/4] Choix du langage</strong> — 13 langages pour les projets Hello World</li>
+        <li><strong>[3/4] Résumé + confirmation</strong> — récapitulatif avant génération avec spinner</li>
+      </ol>
+      <p>Utilisez les flèches pour naviguer, tapez pour filtrer, et Entrée pour sélectionner. Vous pouvez aussi combiner plusieurs templates (ex: <code>webapi+react</code>).</p>
 
       <h3>Mode silencieux pour CI</h3>
       <div className="install-cmd">

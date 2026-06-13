@@ -34,6 +34,7 @@ export default function Changelog() {
           <li>Site de documentation complet avec 18 pages</li>
           <li>Homebrew tap officiel</li>
           <li>.NET 9 avec System.CommandLine 2.0.8, zéro warning</li>
+          <li>Assistant interactif type Vite pour <code>scaffold new</code> : étapes [1/4] à [4/4], validation, résumé, spinner de génération, indicateurs clavier</li>
         </ul>
       </article>
 

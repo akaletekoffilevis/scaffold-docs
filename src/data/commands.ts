@@ -24,7 +24,7 @@ export const commands: CommandCategory[] = [
       {
         "search": "new cree projet template hello dotnet npm cargo go python flutter laravel rails gradle swift zig mix cabal",
         "syntax": "new [--template] [--name] [--language] [--output] [--dry-run] [--silent] [--no-git] [--fav] [--verbose]",
-        "description": "Crée un nouveau projet à partir d'un template. Si aucun argument n'est fourni, affiche un menu interactif.",
+        "description": "Crée un nouveau projet à partir d'un template. Si aucun argument n'est fourni, affiche un assistant interactif en plusieurs étapes (nom, type, variante, langage, résumé + confirmation) avec barre de progression et spinner de génération.",
         "badge": "génération",
         "options": [
           { "flag": "[type]", "desc": "Type de projet (optionnel si mode interactif)" },
