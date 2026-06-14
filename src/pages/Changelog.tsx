@@ -16,6 +16,12 @@ export default function Changelog() {
           <li>Fallback Hello World : retourne code 42 (warning) au lieu de 0</li>
           <li>URL logo corrigée : <code>anomalyco/scaffolder</code> → <code>akaletekoffilevis/Scaffolder-CLI</code></li>
           <li>Plus de <code>Environment.Exit()</code> — annulation propre par retour de valeur</li>
+          <li>Alias <code>-v</code> pour <code>--version</code> (root command)</li>
+          <li><code>--version</code> aligné sur le format <code>-v</code> : affiche <code>Scaffolder vX.Y.Z+commit</code></li>
+          <li><code>StepHeader</code> corrigé : les crochets <code>[1/4]</code> ne sont plus interprétés comme du markup Spectre.Console</li>
+          <li><code>GetFavTemplate</code> AOT-safe : utilise <code>JsonContext</code> source-generation — 0 warning IL</li>
+          <li><code>UpdateService</code> : permission check corrigé (temp file au lieu d'ouvrir le binaire en cours d'exécution)</li>
+          <li>40+ commandes testées sans crash (intégration validée)</li>
         </ul>
       </article>
 

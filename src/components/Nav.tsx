@@ -63,6 +63,7 @@ export default function Nav() {
             </li>
           ))}
         </ul>
+        <span className="close-hint">Clique sur l'overlay ou appuie sur Échap pour fermer</span>
       </div>
     </>
   )
