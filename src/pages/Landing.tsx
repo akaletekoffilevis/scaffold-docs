@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 
 export default function Landing() {
   return (
-    <div className="page-content">
+    <div className="page-content landing-page">
       <header>
         <div className="hero">
           <img src="/logo.svg" alt="Scaffolder Logo" className="hero-logo" />
           <h1>Scaffolder</h1>
-          <p className="subtitle">CLI universel pour générer des projets dans tous les langages</p>
+          <p className="hero-subtitle">CLI universel pour générer des projets dans tous les langages</p>
           <div className="hero-actions">
             <Link to="/docs/getting-started" className="btn btn-primary">Commencer</Link>
             <Link to="/docs" className="btn btn-secondary">Documentation</Link>
@@ -109,8 +109,8 @@ export default function Landing() {
         </div>
       </section>
 
-      <footer>
-        <p>Scaffolder — CLI de génération de projets — <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer">GitHub</a> — <a href="https://scaffolder-cli.vercel.app" target="_blank" rel="noopener noreferrer">Documentation</a></p>
+      <footer className="landing-footer">
+        <p>Scaffolder — CLI de génération de projets — <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer">GitHub</a></p>
       </footer>
     </div>
   )
