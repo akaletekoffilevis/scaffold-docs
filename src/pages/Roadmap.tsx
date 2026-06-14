@@ -4,25 +4,25 @@ export default function Roadmap() {
       <h1>Roadmap</h1>
       <p>Découvrez ce qui est prévu pour les prochaines versions de Scaffolder.</p>
 
-      <h2>Prochaine version (v2.1.0)</h2>
+      <h2>Prochaine version (v2.2.0)</h2>
       <ul>
         <li>Extension VS Code publiée sur le marketplace</li>
-        <li>Homebrew tap officiel avec formulaire automatisé</li>
         <li>Nouveaux templates : Kotlin, Scala, Elixir, Crystal</li>
         <li>Support de GitLab CI et Jenkins dans <code>scaffold github actions</code></li>
         <li>Amélioration de l'auto-complétion avec suggestions contextuelles</li>
-      </ul>
-
-      <h2>Version v2.2.0</h2>
-      <ul>
-        <li>Interface graphique desktop avec Tauri</li>
-        <li>Plus de fournisseurs IA : Mistral AI, DeepSeek, Llama 3 local</li>
         <li>Mode collaboratif avec partage de templates entre équipes</li>
-        <li>Analyseur de code avec suggestions d'architecture</li>
-        <li>Génération de documentation automatique pour les API</li>
       </ul>
 
       <h2>Version v2.3.0</h2>
+      <ul>
+        <li>Interface graphique desktop avec Tauri</li>
+        <li>Plus de fournisseurs IA : Mistral AI, DeepSeek, Llama 3 local</li>
+        <li>Analyseur de code avec suggestions d'architecture</li>
+        <li>Génération de documentation automatique pour les API</li>
+        <li>Kubernetes support dans <code>scaffold deploy</code></li>
+      </ul>
+
+      <h2>Version v2.4.0</h2>
       <ul>
         <li>Support des templates CI/CD (GitHub Actions, GitLab CI, Jenkins) en une commande</li>
         <li>Marketplace de templates avec système de notation</li>
@@ -50,7 +50,7 @@ export default function Roadmap() {
         <li>Support des architectures microservices avec génération de code de communication</li>
       </ul>
 
-      <h2>Terminé (v2.1.0)</h2>
+      <h2>Terminé <span className="done-badge">v2.1.0</span></h2>
       <ul>
         <li>Assistant interactif type Vite pour <code>scaffold new</code> (4 étapes, validation, résumé, spinner)</li>
         <li>Message post-génération adapté au template (npm run dev, cargo run, flutter run…)</li>
