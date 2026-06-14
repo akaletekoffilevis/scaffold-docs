@@ -1,224 +1,175 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Landing() {
-  const [activeTab, setActiveTab] = useState(0)
-  const installCmds = [
-    [`curl -fsSL https://scaffolder.dev/install.sh | sh`, `# Ou avec dotnet tool\ndotnet tool install --global Scaffolder.CLI`],
-    [`brew install scaffolder/tap/scaffolder`, `# Ou avec dotnet tool\ndotnet tool install --global Scaffolder.CLI`],
-    [`winget install Scaffolder.CLI`, `# Ou avec dotnet tool\ndotnet tool install --global Scaffolder.CLI`],
-  ]
   return (
     <div className="page-content landing-page">
       <header>
         <div className="hero">
-          <span className="hero-badge">v2.1.0 - AOT Natif</span>
           <img src="/logo.svg" alt="Scaffolder Logo" className="hero-logo" />
           <h1>Scaffolder</h1>
           <p className="hero-subtitle">
-            CLI universel pour générer des projets dans tous les langages
+            CLI universel pour g&eacute;n&eacute;rer des projets<br />
+            dans tous les langages
           </p>
           <div className="hero-actions">
             <Link to="/docs/getting-started" className="btn btn-primary">
               Commencer
             </Link>
-            <Link to="/docs" className="btn btn-secondary">
-              Documentation
+            <Link to="/docs/installation" className="btn btn-secondary">
+              Installer
             </Link>
             <a
               href="https://github.com/akaletekoffilevis/Scaffolder-CLI"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-secondary"
+              className="btn btn-ghost"
             >
               GitHub
             </a>
           </div>
-          <div className="hero-download">
-            <Link to="/docs/installation" className="btn-download-hero">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-              </svg>
-              Voir les options d'installation
-            </Link>
-          </div>
         </div>
       </header>
 
+      <div className="terminal-preview">
+        <div className="terminal-bar">
+          <span className="terminal-dot" />
+          <span className="terminal-dot" />
+          <span className="terminal-dot" />
+          <span className="terminal-title">bash — scaffold new</span>
+        </div>
+        <div className="terminal-body">
+          <span className="prompt">$</span> scaffold new webapi --name=blog-api
+          <br />
+          <span className="dim">[1/4] Nom du projet :</span> blog-api
+          <br />
+          <span className="dim">[2/4] Cat&eacute;gorie :</span> Backend
+          <br />
+          <span className="dim">[3/4] Langage :</span> C# (.NET 9)
+          <br />
+          <span className="dim">[4/4] Variante :</span> Minimal API
+          <br />
+          <span className="green">✓</span> Projet g&eacute;n&eacute;r&eacute; en 2.3s
+          <br />
+          <span className="dim">Pour lancer :</span> cd blog-api &amp;&amp; dotnet run
+        </div>
+      </div>
+
       <section className="section">
-        <h2>Utilisé par</h2>
-        <p className="section-description">
-          Des équipes de développement du monde entier font confiance à Scaffolder
+        <h2>G&eacute;n&eacute;rer, builder, d&eacute;ployer</h2>
+        <p className="section-desc">
+          Scaffolder couvre tout le cycle de vie d&rsquo;un projet, du
+          <code>scaffold new</code> au <code>scaffold deploy</code>.
         </p>
-        <div className="trusted-by">
-          <span className="company-pill">TechCorp</span>
-          <span className="company-pill">DevStudio</span>
-          <span className="company-pill">CloudScale</span>
-          <span className="company-pill">NexaSoft</span>
-          <span className="company-pill">OpenSource Labs</span>
-          <span className="company-pill">AppForge</span>
-          <span className="company-pill">DataBridge</span>
-          <span className="company-pill">CodeCraft</span>
+        <div className="features-list">
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold new</span>
+            <span className="feature-desc">
+              G&eacute;n&egrave;re un projet pr&ecirc;t &agrave; coder dans 18+
+              langages et frameworks
+            </span>
+          </div>
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold build</span>
+            <span className="feature-desc">
+              Compile le projet avec les outils du langage (dotnet, cargo, npm,
+              go, flutter&hellip;)
+            </span>
+          </div>
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold test</span>
+            <span className="feature-desc">
+              Lance les tests unitaires du projet
+            </span>
+          </div>
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold docker</span>
+            <span className="feature-desc">
+              G&eacute;n&egrave;re un Dockerfile et un docker-compose
+              multi-stage
+            </span>
+          </div>
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold deploy</span>
+            <span className="feature-desc">
+              D&eacute;ploie vers Vercel, Railway, Docker, GitHub Pages
+            </span>
+          </div>
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold stack</span>
+            <span className="feature-desc">
+              G&eacute;n&egrave;re un projet fullstack front + back + base de
+              donn&eacute;es
+            </span>
+          </div>
         </div>
       </section>
 
-      <section className="section">
-        <h2>Pourquoi Scaffolder ?</h2>
-        <p className="section-description">
-          Un outil complet pour accélérer la création et le déploiement de vos projets
+      <div className="quote-bar">
+        <p>
+          <span className="quote-mark">&ldquo;</span>40+ commandes &mdash; un
+          seul outil<span className="quote-mark">&rdquo;</span>
         </p>
-        <div className="grid">
-          <div className="card">
-            <div className="card-icon">{'>'}_</div>
-            <h3>40+ commandes</h3>
-            <p>
-              Init, build, test, docker, github, lint, format, registry,
-              migration, batch, et bien plus encore.
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-icon">[#]</div>
-            <h3>Multi-langage</h3>
-            <p>
-              .NET, Node.js, Rust, Go, Python, Flutter, Laravel, Symfony,
-              Rails, et 20+ autres langages et frameworks.
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-icon">[+]</div>
-            <h3>Fullstack</h3>
-            <p>
-              Génère un projet complet frontend + backend + base de données
-              en une seule commande.
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-icon">[?]</div>
-            <h3>IA intégrée</h3>
-            <p>
-              Suggestions, explications et correction d'erreurs via OpenAI,
-              Claude, Gemini ou Grok.
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-icon">[!]</div>
-            <h3>AOT natif</h3>
-            <p>
-              Compilé en binaire natif. Pas de runtime nécessaire.
-              Démarrage instantané.
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-icon">[*]</div>
-            <h3>Extensible</h3>
-            <p>
-              Plugins, templates custom, registry communautaire, workspace
-              VS Code.
-            </p>
-          </div>
-        </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="stats-bar">
-          <div className="stat">
-            <strong>40+</strong> commandes
-          </div>
-          <div className="stat">
-            <strong>12 MB</strong> AOT
-          </div>
-          <div className="stat">
-            <strong>7</strong> plateformes
-          </div>
-          <div className="stat">
-            <strong>18</strong> templates
-          </div>
-          <div className="stat">
-            <strong>Open Source</strong>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <h2>Ils utilisent Scaffolder</h2>
-        <p className="section-description">
-          Des développeurs du monde entier utilisent Scaffolder au quotidien
-        </p>
-        <div className="testimonials-grid">
-          <div className="testimonial-card">
-            <p className="quote">
-              Scaffolder nous a fait gagner des heures sur chaque nouveau
-              projet. Le gain de productivité est immense.
-            </p>
-            <div className="author">
-              <div className="author-avatar">SM</div>
-              <div className="author-info">
-                <div className="author-name">Sophie Martin</div>
-                <div className="author-role">Tech Lead chez TechCorp</div>
-              </div>
-            </div>
-          </div>
-          <div className="testimonial-card">
-            <p className="quote">
-              La possibilité de générer un stack complet front + back en une
-              commande est tout simplement révolutionnaire.
-            </p>
-            <div className="author">
-              <div className="author-avatar">TD</div>
-              <div className="author-info">
-                <div className="author-name">Thomas Dubois</div>
-                <div className="author-role">CTO chez DevStudio</div>
-              </div>
-            </div>
-          </div>
-          <div className="testimonial-card">
-            <p className="quote">
-              Utilisé quotidiennement par toute notre équipe. L'AOT natif rend
-              le démarrage instantané.
-            </p>
-            <div className="author">
-              <div className="author-avatar">AB</div>
-              <div className="author-info">
-                <div className="author-name">Amélie Bernard</div>
-                <div className="author-role">Lead Dev chez CloudScale</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
+      <section className="section section-compact">
         <h2>Installation</h2>
-        <p className="section-description">
-          Choisissez votre système d'exploitation pour installer Scaffolder
-        </p>
-        <div className="tabs">
-          {['Linux', 'macOS', 'Windows'].map((os, i) => (
-            <button
-              key={os}
-              className={`tab${i === activeTab ? ' active' : ''}`}
-              onClick={() => setActiveTab(i)}
-            >
-              {os}
-            </button>
-          ))}
-        </div>
-        {installCmds[activeTab].map((cmd, i) => (
-          <div className="install-cmd" key={i}>
-            <code>{cmd}</code>
+        <div className="one-liner">
+          <div className="install-box">
+            <code>
+              curl -fsSL https://scaffolder.dev/install.sh | sh
+            </code>
           </div>
-        ))}
+          <p className="install-alt">
+            Ou via <Link to="/docs/installation">dotnet tool, Homebrew,
+            winget</Link> &mdash; binaire AOT natif ~12 MB, 7 plateformes
+          </p>
+        </div>
       </section>
 
-      <section className="section">
-        <h2>Langages supportés</h2>
+      <section className="section section-compact">
+        <h2>Premier projet</h2>
+        <div className="quickstart-steps">
+          <div className="qs-step">
+            <span className="qs-num">1</span>
+            <div>
+              <strong>Installer</strong>
+              <span className="qs-cmd">curl -fsSL https://scaffolder.dev/install.sh | sh</span>
+            </div>
+          </div>
+          <div className="qs-step">
+            <span className="qs-num">2</span>
+            <div>
+              <strong>Cr&eacute;er un projet</strong>
+              <span className="qs-cmd">scaffold new webapi --name=mon-api</span>
+            </div>
+          </div>
+          <div className="qs-step">
+            <span className="qs-num">3</span>
+            <div>
+              <strong>Lancer</strong>
+              <span className="qs-cmd">cd mon-api &amp;&amp; dotnet run</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="stats-bar">
+        <div className="stat">
+          <strong>40+</strong> commandes
+        </div>
+        <div className="stat">
+          <strong>18</strong> templates
+        </div>
+        <div className="stat">
+          <strong>7</strong> plateformes
+        </div>
+        <div className="stat">
+          <strong>12 MB</strong> AOT
+        </div>
+      </div>
+
+      <section className="section section-compact">
+        <h2>Langages support&eacute;s</h2>
         <div className="lang-badges">
           <span className="badge">.NET</span>
           <span className="badge">Node.js</span>
@@ -239,85 +190,35 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="section">
-        <h2>Démarrage rapide</h2>
-        <div className="demo-cmds">
-          <div className="install-cmd">
-            <code>scaffold new --template=webapi --name=mon-api</code>
-          </div>
-          <div className="install-cmd">
-            <code>scaffold new webapi+react --name=full-app</code>
-          </div>
-          <div className="install-cmd">
-            <code>scaffold deploy --target=docker</code>
-          </div>
-          <div className="install-cmd">
-            <code>scaffold upgrade</code>
-          </div>
-        </div>
-      </section>
-
       <footer className="site-footer">
         <div className="footer-grid">
           <div>
             <h4>Documentation</h4>
             <ul>
-              <li>
-                <Link to="/docs/getting-started">Prise en main</Link>
-              </li>
-              <li>
-                <Link to="/docs">Guide complet</Link>
-              </li>
-              <li>
-                <Link to="/docs/installation">Installation</Link>
-              </li>
+              <li><Link to="/docs/getting-started">Prise en main</Link></li>
+              <li><Link to="/docs/installation">Installation</Link></li>
+              <li><Link to="/docs">R&eacute;f&eacute;rence</Link></li>
             </ul>
           </div>
           <div>
-            <h4>Communauté</h4>
+            <h4>Projet</h4>
             <ul>
-              <li>
-                <a
-                  href="https://github.com/akaletekoffilevis/Scaffolder-CLI"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/akaletekoffilevis/Scaffolder-CLI/issues"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Signaler un bug
-                </a>
-              </li>
+              <li><a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/issues" target="_blank" rel="noopener noreferrer">Signaler un bug</a></li>
+              <li><Link to="/changelog">Changelog</Link></li>
             </ul>
           </div>
           <div>
-            <h4>Ressources</h4>
+            <h4>Liens</h4>
             <ul>
-              <li>
-                <Link to="/changelog">Changelog</Link>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/akaletekoffilevis/Scaffolder-CLI/releases"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Releases
-                </a>
-              </li>
+              <li><Link to="/about">&Agrave; propos</Link></li>
+              <li><Link to="/roadmap">Roadmap</Link></li>
+              <li><Link to="/community">Communaut&eacute;</Link></li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>
-            Scaffolder — CLI de génération de projets — MIT License
-          </p>
+          <p>Scaffolder &mdash; CLI de g&eacute;n&eacute;ration de projets &mdash; MIT License</p>
         </div>
       </footer>
     </div>
