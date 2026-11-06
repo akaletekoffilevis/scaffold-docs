@@ -570,6 +570,47 @@ export const commands: CommandCategory[] = [
         ]
       },
       {
+        "search": "list liste templates disponibles installe json",
+        "syntax": "list [--json] [--available]",
+        "description": "Liste tous les templates disponibles (natifs, Hello World, registry). Avec --available, n'affiche que ceux dont l'outil requis est installé.",
+        "badge": "templates",
+        "options": [
+          { "flag": "--json", "desc": "Sortie JSON (pour scripts)" },
+          { "flag": "--available", "desc": "Templates dont l'outil est installé uniquement" }
+        ],
+        "examples": [
+          "scaffold list",
+          "scaffold list --available",
+          "scaffold list --json"
+        ]
+      },
+      {
+        "search": "stats statistiques historique utilisation locale",
+        "syntax": "stats [--json] [--limit]",
+        "description": "Affiche les statistiques d'utilisation locales : templates les plus créés et historique récent. Les données restent sur votre machine.",
+        "badge": "utilitaires",
+        "options": [
+          { "flag": "--json", "desc": "Sortie JSON" },
+          { "flag": "--limit", "desc": "Nombre d'entrées d'historique (défaut : 10)" }
+        ],
+        "examples": [
+          "scaffold stats",
+          "scaffold stats --limit 25 --json"
+        ]
+      },
+      {
+        "search": "ai assistant ia question demande suggestion mode hors ligne",
+        "syntax": "ai <status|test|ask|suggest|explain|fix|models>",
+        "description": "Utilise l'assistant IA configuré (OpenAI, Claude, Gemini, Grok) ou le mode hors ligne si aucune clé n'est définie. Regroupe les commandes suggest, explain et fix.",
+        "badge": "interface",
+        "options": [],
+        "examples": [
+          "scaffold ai status",
+          "scaffold ai ask \"Quelle différence entre REST et GraphQL ?\"",
+          "scaffold ai suggest api rest python"
+        ]
+      },
+      {
         "search": "bug signaler rapport email github issue probleme",
         "syntax": "bug <description>",
         "description": "Signale un bug par email ou GitHub. Ouvre le client mail par défaut avec un rapport pré-rempli contenant la description et les informations système.",

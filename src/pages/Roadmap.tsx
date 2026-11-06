@@ -4,17 +4,26 @@ export default function Roadmap() {
       <h1>Roadmap</h1>
       <p>Découvrez ce qui est prévu pour les prochaines versions de Scaffolder.</p>
 
-      <h2>Prochaine version (v2.2.0)</h2>
+      <h2>Terminé <span className="done-badge">v2.2.0</span></h2>
+      <ul>
+        <li>Migration vers .NET 10 (runtime, CI et publication)</li>
+        <li>Assistant interactif amélioré : filtre de liste actif, étapes adaptées au parcours, récapitulatif complet</li>
+        <li>Configuration auth / base de données / architecture proposée uniquement pour les web apps .NET</li>
+        <li>Choix de l'assistant réellement appliqués à la génération</li>
+        <li>Stack fullstack lancée directement depuis l'assistant</li>
+        <li>Les outils natifs (<code>dotnet new</code>, <code>npm create</code>, <code>cargo new</code>, <code>flutter create</code>, <code>composer</code>, <code>rails new</code>, <code>mix new</code>) créent eux-mêmes le dossier du projet</li>
+        <li>Composition <code>dotnet+react</code> : chaque sous-projet est créé dans son dossier</li>
+        <li>Nouvelles commandes : <code>list</code>, <code>stats</code>, <code>ai</code></li>
+        <li>Options globales <code>--yes</code>, <code>--no-color</code>, <code>--verbose</code>, <code>--quiet</code></li>
+        <li>Sécurité : exécution des processus sans shell, configuration chiffrée, vérification SHA-256 des mises à jour</li>
+      </ul>
+
+      <h2>Prochaine version (v2.3.0)</h2>
       <ul>
         <li>Extension VS Code publiée sur le marketplace</li>
-        <li>Nouveaux templates : Kotlin, Scala, Elixir, Crystal</li>
         <li>Support de GitLab CI et Jenkins dans <code>scaffold github actions</code></li>
         <li>Amélioration de l'auto-complétion avec suggestions contextuelles</li>
         <li>Mode collaboratif avec partage de templates entre équipes</li>
-      </ul>
-
-      <h2>Version v2.3.0</h2>
-      <ul>
         <li>Interface graphique desktop avec Tauri</li>
         <li>Plus de fournisseurs IA : Mistral AI, DeepSeek, Llama 3 local</li>
         <li>Analyseur de code avec suggestions d'architecture</li>

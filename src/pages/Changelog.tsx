@@ -4,6 +4,26 @@ export default function Changelog() {
       <h1>Changelog</h1>
 
       <article>
+        <h2>v2.2.0</h2>
+        <p><em>6 novembre 2026</em></p>
+        <p>Migration .NET 10, assistant interactif revu, nouvelles commandes et durcissement du cœur.</p>
+        <ul>
+          <li>Migration vers .NET 10 (runtime, workflows CI, scripts de publication)</li>
+          <li>Assistant interactif : filtre de liste actif (<em>tapez pour filtrer</em>), étapes adaptées au parcours, récapitulatif complet</li>
+          <li>Configuration auth / base de données / architecture proposée uniquement pour <code>webapi</code> et <code>blazor</code></li>
+          <li>Correction : les choix faits dans l'assistant sont maintenant appliqués à la génération</li>
+          <li>Correction : « Stack fullstack » lance l'assistant stack au lieu d'afficher une commande à copier</li>
+          <li>Correction : la composition <code>dotnet+react</code> et la stack créent les dossiers avant de lancer les outils natifs</li>
+          <li>Correction : le spinner ne se superpose plus à la sortie des outils natifs</li>
+          <li>Les outils natifs créent eux-mêmes le dossier du projet (<code>dotnet new</code>, <code>npm create</code>, <code>cargo new</code>, <code>flutter create</code>, <code>composer create-project</code>, <code>rails new</code>, <code>mix new</code>)</li>
+          <li>Stack : le backend <code>express</code> est retiré (non pris en charge)</li>
+          <li>Nouvelles commandes : <code>scaffold list</code>, <code>scaffold stats</code>, <code>scaffold ai</code></li>
+          <li>Options globales : <code>--yes</code>, <code>--no-color</code>, <code>--verbose</code>, <code>--quiet</code></li>
+          <li>Sécurité : processus sans injection shell, timeout et arrêt de l'arbre de processus, configuration chiffrée (AES-GCM), vérification SHA-256 des mises à jour</li>
+        </ul>
+      </article>
+
+      <article>
         <h2>v2.1.0</h2>
         <p><em>13 juin 2026</em></p>
         <p>Assistant interactif nouvelle génération, correction de bugs, message post-génération adapté.</p>

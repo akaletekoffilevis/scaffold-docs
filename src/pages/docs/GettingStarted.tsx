@@ -49,19 +49,20 @@ scaffold version</code>
   .gitignore`}</pre>
 
       <h2>Étape 3 : Explorer l'assistant interactif</h2>
-      <p>Sans arguments, Scaffolder lance un assistant interactif en plusieurs étapes (style Vite) :</p>
+      <p>Sans arguments, Scaffolder lance un assistant interactif (style Vite) qui vous guide pas à pas :</p>
       <div className="install-cmd">
         <code>scaffold new</code>
         <button className="btn-copy" onClick={() => copyText('scaffold new')}>Copier</button>
       </div>
-      <p>L'assistant vous guide étape par étape :</p>
       <ol>
-        <li><strong>[1/4] Nom du projet</strong> — saisie avec validation</li>
-        <li><strong>[2/4] Type de projet</strong> — Hello World, Framework complet ou Stack fullstack</li>
-        <li><strong>[3/4] Choix du langage</strong> — 13 langages pour les projets Hello World</li>
-        <li><strong>[3/4] Résumé + confirmation</strong> — récapitulatif avant génération avec spinner</li>
+        <li><strong>Nom du projet</strong> — saisie avec validation</li>
+        <li><strong>Type de projet</strong> — Hello World, Framework complet ou Stack fullstack</li>
+        <li><strong>Langage ou écosystème</strong> — 16 langages pour Hello World, ou un écosystème (.NET, npm, Cargo, Go, Python, Flutter…)</li>
+        <li><strong>Variante</strong> — seulement si l'écosystème en propose plusieurs (ex : vite, next, vue pour npm)</li>
+        <li><strong>Configuration</strong> — authentification, base de données et architecture, uniquement pour les web apps .NET (webapi, blazor)</li>
+        <li><strong>Récapitulatif</strong> — résumé complet, confirmation, puis génération</li>
       </ol>
-      <p>Utilisez les flèches pour naviguer, tapez pour filtrer, et Entrée pour sélectionner. Vous pouvez aussi combiner plusieurs templates (ex: <code>webapi+react</code>).</p>
+      <p>Utilisez les flèches (↑ ↓) pour naviguer, tapez pour filtrer la liste, et Entrée pour valider. Le choix « Stack fullstack » lance l'assistant frontend + backend + base de données.</p>
 
       <h3>Mode silencieux pour CI</h3>
       <div className="install-cmd">
