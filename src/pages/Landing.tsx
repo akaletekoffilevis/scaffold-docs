@@ -44,7 +44,7 @@ export default function Landing() {
           <br />
           <span className="dim">[2/4] Cat&eacute;gorie :</span> Backend
           <br />
-          <span className="dim">[3/4] Langage :</span> C# (.NET 9)
+          <span className="dim">[3/4] Langage :</span> C# (.NET 10)
           <br />
           <span className="dim">[4/4] Variante :</span> Minimal API
           <br />
@@ -61,6 +61,13 @@ export default function Landing() {
           <code>scaffold new</code> au <code>scaffold deploy</code>.
         </p>
         <div className="features-list">
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold tui</span>
+            <span className="feature-desc">
+              Interface terminal plein &eacute;cran (th&egrave;me sombre, F1&ndash;F9,
+              assistant IA int&eacute;gr&eacute;)
+            </span>
+          </div>
           <div className="feature-row">
             <span className="feature-cmd">scaffold new</span>
             <span className="feature-desc">
