@@ -193,7 +193,7 @@ export default function Landing() {
 
       <div className="quote-bar">
         <p>
-          <span className="quote-mark">&ldquo;</span>40+ commandes &mdash; un
+          <span className="quote-mark">&ldquo;</span>48 commandes &mdash; un
           seul outil<span className="quote-mark">&rdquo;</span>
         </p>
       </div>
@@ -242,16 +242,16 @@ export default function Landing() {
 
       <div className="stats-bar">
         <div className="stat">
-          <strong>40+</strong> commandes
+          <strong>48</strong> commandes
         </div>
         <div className="stat">
-          <strong>18</strong> templates
+          <strong>63</strong> templates
         </div>
         <div className="stat">
           <strong>7</strong> plateformes
         </div>
         <div className="stat">
-          <strong>12 MB</strong> AOT
+          <strong>17 MB</strong> AOT
         </div>
       </div>
 
@@ -277,37 +277,6 @@ export default function Landing() {
         </div>
       </section>
 
-      <footer className="site-footer">
-        <div className="footer-grid">
-          <div>
-            <h4>Documentation</h4>
-            <ul>
-              <li><Link to="/docs/getting-started">Prise en main</Link></li>
-              <li><Link to="/docs/installation">Installation</Link></li>
-              <li><Link to="/docs">R&eacute;f&eacute;rence</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Projet</h4>
-            <ul>
-              <li><a href="https://github.com/akaletekoffilevis/Scaffolder-CLI" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/issues" target="_blank" rel="noopener noreferrer">Signaler un bug</a></li>
-              <li><Link to="/changelog">Changelog</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Liens</h4>
-            <ul>
-              <li><Link to="/about">&Agrave; propos</Link></li>
-              <li><Link to="/roadmap">Roadmap</Link></li>
-              <li><Link to="/community">Communaut&eacute;</Link></li>
-            </ul>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>Scaffolder &mdash; CLI de g&eacute;n&eacute;ration de projets &mdash; MIT License</p>
-        </div>
-      </footer>
     </div>
   )
 }
