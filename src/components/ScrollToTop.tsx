@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { ArrowUp } from 'lucide-react'
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false)
@@ -17,9 +18,7 @@ export default function ScrollToTop() {
       onClick={scrollToTop}
       aria-label="Retour en haut"
     >
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M18 15l-6-6-6 6" />
-      </svg>
+      <ArrowUp size={20} />
     </button>
   )
 }
