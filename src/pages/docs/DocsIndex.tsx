@@ -3,7 +3,7 @@ import ContactForm from '../../components/ContactForm'
 
 export default function DocsIndex() {
   const sections = [
-    { to: '/docs/installation', title: 'Installation', desc: 'Installez Scaffolder sur Linux, macOS ou Windows via binaire, dotnet tool, Homebrew ou compilation', icon: '📥' },
+    { to: '/docs/installation', title: 'Installation', desc: 'Installez Scaffolder sur Linux, macOS ou Windows via binaire, Homebrew ou compilation', icon: '📥' },
     { to: '/docs/getting-started', title: 'Premiers pas', desc: 'Créez, lancez et déployez votre premier projet en 5 minutes avec des exemples concrets', icon: '🚀' },
     { to: '/docs/commands', title: 'Commandes', desc: 'Référence complète des 40+ commandes organisées en 9 catégories avec options, exemples et search', icon: '⚡' },
     { to: '/docs/templates', title: 'Templates', desc: 'Catalogue des 18 templates prêts à l\'emploi : webapi, blazor, vite, react, next, django, flutter, laravel et plus', icon: '📦' },

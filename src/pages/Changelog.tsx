@@ -86,7 +86,7 @@ export default function Changelog() {
           <li>7 plateformes supportées (linux-x64, linux-musl-x64, linux-arm64, osx-x64, osx-arm64, win-x64, win-x86)</li>
           <li>CI GitHub Actions avec build automatique sur tag v*</li>
           <li>Site de documentation complet avec 18 pages</li>
-          <li>Homebrew tap officiel</li>
+          <li>Homebrew tap (communauté)</li>
           <li>.NET 10 avec System.CommandLine 2.0.8, zéro warning</li>
         </ul>
       </article>

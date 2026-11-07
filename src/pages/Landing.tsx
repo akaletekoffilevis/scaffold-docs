@@ -203,12 +203,13 @@ export default function Landing() {
         <div className="one-liner">
           <div className="install-box">
             <code>
-              curl -fsSL https://scaffolder.dev/install.sh | sh
+              curl -L -o scaffold.tar.gz https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/latest/download/scaffold-linux-x64.tar.gz
+tar -xzf scaffold.tar.gz && sudo mv scaffold /usr/local/bin/
             </code>
           </div>
           <p className="install-alt">
-            Ou via <Link to="/docs/installation">dotnet tool, Homebrew,
-            winget</Link> &mdash; binaire AOT natif ~12 MB, 7 plateformes
+            Ou via <Link to="/docs/installation">téléchargement direct,
+            Homebrew</Link> &mdash; binaire AOT natif ~17 MB, 7 plateformes
           </p>
         </div>
       </section>
@@ -220,7 +221,7 @@ export default function Landing() {
             <span className="qs-num">1</span>
             <div>
               <strong>Installer</strong>
-              <span className="qs-cmd">curl -fsSL https://scaffolder.dev/install.sh | sh</span>
+              <span className="qs-cmd">curl -L -o scaffold.tar.gz .../scaffold-linux-x64.tar.gz && tar -xzf ...</span>
             </div>
           </div>
           <div className="qs-step">

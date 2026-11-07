@@ -104,31 +104,6 @@ source ~/.bashrc`}</code>
         </div>
       </div>
 
-      <h2>Via Homebrew (macOS / Linux)</h2>
-      <p>Si vous utilisez Homebrew, installez Scaffolder en une ligne :</p>
-      <div className="install-cmd">
-        <code>brew tap akaletekoffilevis/scaffolder
-brew install scaffold</code>
-        <button className="btn-copy" onClick={() => copyText('brew tap akaletekoffilevis/scaffolder\nbrew install scaffold')}>Copier</button>
-      </div>
-      <p>Pour mettre à jour via Homebrew :</p>
-      <div className="install-cmd">
-        <code>brew upgrade scaffold</code>
-        <button className="btn-copy" onClick={() => copyText('brew upgrade scaffold')}>Copier</button>
-      </div>
-
-      <h2>Via dotnet tool (recommandé pour les développeurs .NET)</h2>
-      <p>Si vous avez le SDK .NET 10 installé, vous pouvez installer Scaffolder comme outil global :</p>
-      <div className="install-cmd">
-        <code>dotnet tool install -g Scaffolder</code>
-        <button className="btn-copy" onClick={() => copyText('dotnet tool install -g Scaffolder')}>Copier</button>
-      </div>
-      <p>Pour mettre à jour :</p>
-      <div className="install-cmd">
-        <code>dotnet tool update -g Scaffolder</code>
-        <button className="btn-copy" onClick={() => copyText('dotnet tool update -g Scaffolder')}>Copier</button>
-      </div>
-
       <h2>Compilation depuis les sources</h2>
       <p>Vous pouvez aussi compiler Scaffolder vous-même. Nécessite .NET 10 SDK :</p>
       <div className="install-cmd">
@@ -181,8 +156,6 @@ dotnet publish -c Release -r linux-x64 --self-contained
       <ul>
         <li><strong>Linux/macOS :</strong> <code>sudo rm /usr/local/bin/scaffold</code> ou supprimez-le de <code>~/.local/bin/</code></li>
         <li><strong>Windows :</strong> Supprimez <code>scaffold.exe</code> du dossier où vous l'avez extrait</li>
-        <li><strong>Homebrew :</strong> <code>brew uninstall scaffold</code></li>
-        <li><strong>dotnet tool :</strong> <code>dotnet tool uninstall -g Scaffolder</code></li>
       </ul>
 
       <p><Link to="/docs/getting-started">Suivez le guide de démarrage rapide</Link> après installation.</p>

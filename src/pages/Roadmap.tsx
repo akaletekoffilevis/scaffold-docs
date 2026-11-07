@@ -89,7 +89,7 @@ export default function Roadmap() {
         <li>Site de documentation complet avec 18 pages</li>
         <li>Génération de marketplace statique</li>
         <li>Génération d'extensions VS Code</li>
-        <li>Homebrew tap officiel</li>
+        <li>Homebrew tap (communauté)</li>
       </ul>
 
       <p>Une suggestion ? Envoyez un email à <a href="mailto:koffilevis21@gmail.com">koffilevis21@gmail.com</a> ou ouvrez une <a href="https://github.com/akaletekoffilevis/Scaffolder-CLI/issues" target="_blank" rel="noopener noreferrer">issue GitHub</a>.</p>
