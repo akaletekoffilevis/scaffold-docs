@@ -4,6 +4,18 @@ export default function Roadmap() {
       <h1>Roadmap</h1>
       <p>Découvrez ce qui est prévu pour les prochaines versions de Scaffolder.</p>
 
+      <h2>Terminé <span className="done-badge">v2.3.0</span></h2>
+      <ul>
+        <li>Interface terminal (TUI) en plein écran : thème sombre, menu F1–F9, assistant IA intégré, catalogue auto de toutes les commandes</li>
+        <li>Assistant IA contextuel : connaît le projet courant, les outils et les templates ; propose une commande que tu confirmes</li>
+        <li>Interface web locale réécrite : tableau de bord, nouveau projet, stack, ajout de composants, templates, configuration, IA, statistiques</li>
+        <li>Sécurité renforcée : suppression de <code>/api/run</code>, validation des noms, liste blanche des commandes, anti-CSRF</li>
+        <li>Sérialisation JSON sans réflexion (AOT) pour <code>list</code>, <code>stats</code> et <code>doctor --json</code></li>
+        <li>Refonte de l'assistant interactif dans <code>scaffold new</code> (filtre actif, étapes adaptées, config .NET uniquement)</li>
+        <li>Les outils natifs créent eux-mêmes le dossier du projet</li>
+        <li>Migration vers .NET 10 et publication AOT multi-plateforme</li>
+      </ul>
+
       <h2>Terminé <span className="done-badge">v2.2.0</span></h2>
       <ul>
         <li>Migration vers .NET 10 (runtime, CI et publication)</li>

@@ -4,6 +4,19 @@ export default function Changelog() {
       <h1>Changelog</h1>
 
       <article>
+        <h2>v2.3.0</h2>
+        <p><em>7 novembre 2026</em></p>
+        <p>Interface terminal (TUI) complète, assistant IA contextuel, interface web réécrite, sécurité renforcée.</p>
+        <ul>
+          <li>Interface terminal plein écran (Terminal.Gui) : thème sombre, menu F1–F9, assistant IA intégré, catalogue auto de toutes les commandes</li>
+          <li>Assistant IA contextuel : connaît le projet courant, les outils et les templates ; propose une commande que tu confirmes</li>
+          <li>Interface web locale réécrite : tableau de bord, nouveau projet, stack, ajout de composants, templates, configuration, IA, statistiques</li>
+          <li>Sécurité renforcée : suppression de <code>/api/run</code>, validation des noms, liste blanche des commandes, anti-CSRF</li>
+          <li>Sérialisation JSON sans réflexion (AOT) pour <code>list</code>, <code>stats</code> et <code>doctor --json</code></li>
+        </ul>
+      </article>
+
+      <article>
         <h2>v2.2.0</h2>
         <p><em>6 novembre 2026</em></p>
         <p>Migration .NET 10, assistant interactif revu, nouvelles commandes et durcissement du cœur.</p>
