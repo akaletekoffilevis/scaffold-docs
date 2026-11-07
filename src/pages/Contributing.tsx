@@ -12,7 +12,7 @@ export default function Contributing() {
 
       <h2>Prérequis</h2>
       <ul>
-        <li>.NET 9 SDK installé</li>
+        <li>.NET 10 SDK installé</li>
         <li>Git</li>
         <li>Un éditeur de code (VS Code, Rider, Visual Studio)</li>
         <li>Un compte GitHub</li>

@@ -87,7 +87,7 @@ export default function Changelog() {
           <li>CI GitHub Actions avec build automatique sur tag v*</li>
           <li>Site de documentation complet avec 18 pages</li>
           <li>Homebrew tap officiel</li>
-          <li>.NET 9 avec System.CommandLine 2.0.8, zéro warning</li>
+          <li>.NET 10 avec System.CommandLine 2.0.8, zéro warning</li>
         </ul>
       </article>
 
@@ -159,7 +159,7 @@ export default function Changelog() {
           <li>Première version stable</li>
           <li>10 commandes essentielles : new, build, test, run, clean, lint, format, config, upgrade, bug</li>
           <li>Templates : webapi, blazor, vite, react, next, fastapi, django, console, hello</li>
-          <li>Compilation AOT avec .NET 9</li>
+          <li>Compilation AOT avec .NET 10</li>
           <li>4 plateformes : linux-x64, osx-x64, win-x64</li>
           <li>Site de documentation basique</li>
         </ul>

@@ -34,7 +34,7 @@ export default function Docker() {
       <h2>Architecture multi-stage</h2>
       <p>Les Dockerfiles générés utilisent un build multi-stage pour minimiser la taille des images :</p>
       <h3>Stage 1 - Build</h3>
-      <p>Compilation avec le SDK .NET 9 complet. Tous les outils de build sont disponibles.</p>
+      <p>Compilation avec le SDK .NET 10 complet. Tous les outils de build sont disponibles.</p>
       <h3>Stage 2 - Publish</h3>
       <p>Publication AOT avec <code>dotnet publish</code>. Le binaire natif est produit. Nettoyage des fichiers inutiles.</p>
       <h3>Stage 3 - Runtime</h3>
@@ -59,7 +59,7 @@ ENTRYPOINT ["/app/scaffold"]`}</pre>
       <h2>docker-compose (type full)</h2>
       <p>Avec le type <code>full</code>, Scaffolder génère un fichier <code>docker-compose.yml</code> incluant :</p>
       <ul>
-        <li><strong>Service API</strong> : build multi-stage avec .NET 9 AOT, healthcheck, variables d'environnement</li>
+        <li><strong>Service API</strong> : build multi-stage avec .NET 10 AOT, healthcheck, variables d'environnement</li>
         <li><strong>Service web</strong> : nginx servant les fichiers statiques du frontend avec compression gzip</li>
         <li><strong>Base de données</strong> : PostgreSQL 16 avec volume persistant, init script, backup</li>
         <li><strong>Réseau</strong> : réseau partagé entre les services, isolation des ports</li>

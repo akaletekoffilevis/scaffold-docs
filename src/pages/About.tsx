@@ -30,7 +30,7 @@ export default function About() {
         <h2>Technologies</h2>
         <table>
           <tbody>
-            <tr><td>Runtime</td><td>.NET 9</td></tr>
+            <tr><td>Runtime</td><td>.NET 10</td></tr>
             <tr><td>CLI Framework</td><td>System.CommandLine 2.0.8</td></tr>
             <tr><td>Compilation</td><td>AOT (Ahead-of-Time) — binaire natif, pas de runtime requis</td></tr>
             <tr><td>Taille</td><td>~12 MB</td></tr>

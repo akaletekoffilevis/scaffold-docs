@@ -74,6 +74,67 @@ export default function Landing() {
       </div>
 
       <section className="section">
+        <h2>Nouveaut&eacute;s v2.3.0</h2>
+        <p className="section-desc">
+          La derni&egrave;re version apporte une interface terminal compl&egrave;te,
+          un assistant IA contextuel et une interface web r&eacute;&eacute;crite.
+        </p>
+        <div className="features-list">
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold tui</span>
+            <span className="feature-desc">
+              Interface terminal plein &eacute;cran : th&egrave;me sombre/clair, F1&ndash;F9,
+              assistant IA int&eacute;gr&eacute;, catalogue auto de toutes les commandes
+            </span>
+          </div>
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold ui</span>
+            <span className="feature-desc">
+              Interface web locale : tableau de bord, nouveau projet, stack, ajout,
+              templates, configuration, IA, statistiques
+            </span>
+          </div>
+          <div className="feature-row">
+            <span className="feature-cmd">scaffold ai ask</span>
+            <span className="feature-desc">
+              Assistant contextuel : conna&icirc;t ton projet, tes outils et tes templates,
+              propose une commande que tu confirmes
+            </span>
+          </div>
+          <div className="feature-row">
+            <span className="feature-cmd">S&eacute;curit&eacute;</span>
+            <span className="feature-desc">
+              Suppression de /api/run, validation des noms, liste blanche des commandes,
+              anti-CSRF, s&eacute;rialisation JSON sans r&eacute;flexion (AOT)
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <h2>T&eacute;l&eacute;charger</h2>
+        <p className="section-desc">
+          Binaire unique compil&eacute; en AOT, aucune d&eacute;pendance. Choisis ta plateforme.
+        </p>
+        <div className="download-grid">
+          {[
+            { label: 'Linux x64', file: 'scaffold-linux-x64.tar.gz' },
+            { label: 'Linux musl', file: 'scaffold-linux-musl-x64.tar.gz' },
+            { label: 'Linux ARM64', file: 'scaffold-linux-arm64.tar.gz' },
+            { label: 'macOS Intel', file: 'scaffold-osx-x64.tar.gz' },
+            { label: 'macOS Apple Silicon', file: 'scaffold-osx-arm64.tar.gz' },
+            { label: 'Windows x64', file: 'scaffold-win-x64.tar.gz' },
+            { label: 'Windows x86', file: 'scaffold-win-x86.tar.gz' },
+          ].map(d => (
+            <a key={d.file} href={`https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/latest/download/${d.file}`} className="download-card">
+              <span className="download-icon">&darr;</span>
+              <span>{d.label}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
         <h2>G&eacute;n&eacute;rer, builder, d&eacute;ployer</h2>
         <p className="section-desc">
           Scaffolder couvre tout le cycle de vie d&rsquo;un projet, du

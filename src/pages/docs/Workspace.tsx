@@ -27,7 +27,7 @@ export default function Workspace() {
       <p>Cette commande crée un dossier <code>monorepo/</code> contenant :</p>
       <ul>
         <li><code>frontend/</code> — généré avec le template <strong>vite</strong> (React + TypeScript)</li>
-        <li><code>backend/</code> — généré avec le template <strong>webapi</strong> (.NET 9 API REST)</li>
+        <li><code>backend/</code> — généré avec le template <strong>webapi</strong> (.NET 10 API REST)</li>
         <li>Configuration workspace adaptée au gestionnaire choisi</li>
         <li>Fichier de scripts partagés</li>
       </ul>
@@ -82,7 +82,7 @@ export default function Workspace() {
     package.json
     vite.config.ts
     src/
-  backend/               # .NET 9 WebAPI
+  backend/               # .NET 10 WebAPI
     backend.csproj
     Program.cs
     Controllers/

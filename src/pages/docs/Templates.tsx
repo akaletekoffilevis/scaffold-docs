@@ -11,7 +11,7 @@ interface Template {
 }
 
 const templates: Template[] = [
-  { name: 'webapi', description: 'API REST .NET 9 avec contrôleurs, Swagger, Entity Framework, Serilog', category: '.NET', tags: ['api', 'rest', 'c#', 'swagger', 'ef'], lang: 'C#', cmd: 'scaffold new --template=webapi --name=mon-api' },
+  { name: 'webapi', description: 'API REST .NET 10 avec contrôleurs, Swagger, Entity Framework, Serilog', category: '.NET', tags: ['api', 'rest', 'c#', 'swagger', 'ef'], lang: 'C#', cmd: 'scaffold new --template=webapi --name=mon-api' },
   { name: 'blazor', description: 'Application Blazor WebAssembly interactive avec composants MudBlazor', category: '.NET', tags: ['wasm', 'c#', 'interactive', 'webassembly'], lang: 'C#', cmd: 'scaffold new --template=blazor --name=mon-blazor' },
   { name: 'console', description: 'Application console .NET avec System.CommandLine, DI et logging', category: '.NET', tags: ['cli', 'c#', 'console'], lang: 'C#', cmd: 'scaffold new --template=console --name=mon-cli' },
   { name: 'vite', description: 'Application frontend Vite + React 19 + TypeScript 5 + Tailwind CSS', category: 'JavaScript', tags: ['frontend', 'react', 'ts', 'tailwind'], lang: 'TypeScript', cmd: 'scaffold new --template=vite --name=frontend' },

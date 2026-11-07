@@ -118,7 +118,7 @@ brew install scaffold</code>
       </div>
 
       <h2>Via dotnet tool (recommandé pour les développeurs .NET)</h2>
-      <p>Si vous avez le SDK .NET 9 installé, vous pouvez installer Scaffolder comme outil global :</p>
+      <p>Si vous avez le SDK .NET 10 installé, vous pouvez installer Scaffolder comme outil global :</p>
       <div className="install-cmd">
         <code>dotnet tool install -g Scaffolder</code>
         <button className="btn-copy" onClick={() => copyText('dotnet tool install -g Scaffolder')}>Copier</button>
@@ -130,14 +130,14 @@ brew install scaffold</code>
       </div>
 
       <h2>Compilation depuis les sources</h2>
-      <p>Vous pouvez aussi compiler Scaffolder vous-même. Nécessite .NET 9 SDK :</p>
+      <p>Vous pouvez aussi compiler Scaffolder vous-même. Nécessite .NET 10 SDK :</p>
       <div className="install-cmd">
         <code>git clone https://github.com/akaletekoffilevis/Scaffolder-CLI.git
 cd Scaffolder-CLI/Scaffolder
 dotnet restore
 dotnet publish -c Release -r linux-x64 --self-contained
-./bin/Release/net9.0/linux-x64/publish/scaffold version</code>
-        <button className="btn-copy" onClick={() => copyText('git clone https://github.com/akaletekoffilevis/Scaffolder-CLI.git\ncd Scaffolder-CLI/Scaffolder\ndotnet restore\ndotnet publish -c Release -r linux-x64 --self-contained\n./bin/Release/net9.0/linux-x64/publish/scaffold version')}>Copier</button>
+./bin/Release/net10.0/linux-x64/publish/scaffold version</code>
+        <button className="btn-copy" onClick={() => copyText('git clone https://github.com/akaletekoffilevis/Scaffolder-CLI.git\ncd Scaffolder-CLI/Scaffolder\ndotnet restore\ndotnet publish -c Release -r linux-x64 --self-contained\n./bin/Release/net10.0/linux-x64/publish/scaffold version')}>Copier</button>
       </div>
 
       <h2>Vérification</h2>
