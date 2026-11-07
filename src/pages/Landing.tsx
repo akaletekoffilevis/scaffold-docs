@@ -5,13 +5,17 @@ export default function Landing() {
     <div className="page-content landing-page">
       <header>
         <div className="hero">
-          <img src="/logo.svg" alt="Scaffolder Logo" className="hero-logo" />
-          <h1>Scaffolder</h1>
-          <p className="hero-subtitle">
-            CLI universel pour g&eacute;n&eacute;rer des projets<br />
-            dans tous les langages
-          </p>
-          <div className="hero-actions">
+        <div className="hero-badge">
+          <span className="dot" /> v2.3.0 &middot; .NET 10 &middot; AOT
+        </div>
+        <img src="/logo.svg" alt="Scaffolder Logo" className="hero-logo" />
+        <h1>Scaffolder</h1>
+        <p className="hero-subtitle">
+          G&eacute;n&egrave;re, build, d&eacute;ploie &mdash; de la commande au projet
+          pr&ecirc;t &agrave; coder. 48 commandes, 15 &eacute;cosyst&egrave;mes,
+          interface terminal et web incluses.
+        </p>
+        <div className="hero-actions">
             <Link to="/docs/getting-started" className="btn btn-primary">
               Commencer
             </Link>
@@ -27,6 +31,21 @@ export default function Landing() {
               GitHub
             </a>
           </div>
+        <div className="hero-terminal">
+          <div className="bar">
+            <span className="dot r" /><span className="dot y" /><span className="dot g" />
+            <span className="title">bash &mdash; scaffold tui</span>
+          </div>
+          <div className="body">
+            <span className="line"><span className="prompt">$</span> scaffold new webapi --name=blog-api --db=postgresql --docker</span>
+            <span className="line dim">[1/4] Nom du projet : blog-api</span>
+            <span className="line dim">[2/4] Cat&eacute;gorie : Backend</span>
+            <span className="line dim">[3/4] Langage : C# (.NET 10)</span>
+            <span className="line dim">[4/4] Variante : Minimal API</span>
+            <span className="line"><span className="green">&check;</span> Projet g&eacute;n&eacute;r&eacute; en 2.3s</span>
+            <span className="line dim">Pour lancer : cd blog-api &amp;&amp; dotnet run</span>
+          </div>
+        </div>
         </div>
       </header>
 
