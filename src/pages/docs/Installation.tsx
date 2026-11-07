@@ -48,7 +48,22 @@ scaffold version`
   return (
     <div className="page-content">
       <h1>Installation</h1>
-      <p>Scaffolder est distribué sous forme de binaire unique compilé en AOT. Aucun runtime requis. Choisissez votre plateforme ci-dessous ou téléchargez directement le binaire.</p>
+      <p>Scaffolder est distribué sous forme de binaire unique compilé en AOT. Aucun runtime requis.</p>
+
+      <h2>Installation automatique (recommandée)</h2>
+      <p>Une seule commande, détecte automatiquement votre plateforme :</p>
+      <div className="install-cmd">
+        <code>curl -fsSL https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/latest/download/install.sh | bash</code>
+        <button className="btn-copy" onClick={() => copyText('curl -fsSL https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/latest/download/install.sh | bash')}>Copier</button>
+      </div>
+      <p className="muted">Windows (PowerShell) :</p>
+      <div className="install-cmd">
+        <code>irm https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/latest/download/install.bat -OutFile install.bat; .\install.bat</code>
+        <button className="btn-copy" onClick={() => copyText('irm https://github.com/akaletekoffilevis/Scaffolder-CLI/releases/latest/download/install.bat -OutFile install.bat; .\install.bat')}>Copier</button>
+      </div>
+
+      <h2>Ou choisissez votre plateforme</h2>
+      <p>Téléchargez directement le binaire correspondant :</p>
 
       <div className="tabs">
         {(['linux', 'macos', 'windows'] as const).map(os => (

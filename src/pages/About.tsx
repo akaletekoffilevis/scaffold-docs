@@ -33,12 +33,12 @@ export default function About() {
             <tr><td>Runtime</td><td>.NET 10</td></tr>
             <tr><td>CLI Framework</td><td>System.CommandLine 2.0.8</td></tr>
             <tr><td>Compilation</td><td>AOT (Ahead-of-Time) — binaire natif, pas de runtime requis</td></tr>
-            <tr><td>Taille</td><td>~12 MB</td></tr>
+            <tr><td>Taille</td><td>~17 MB</td></tr>
             <tr><td>Plateformes</td><td>Linux (x64, musl-x64, arm64), macOS (Intel, Apple Silicon), Windows (x64, x86)</td></tr>
             <tr><td>IA intégrée</td><td>OpenAI, Claude, Gemini, Grok</td></tr>
             <tr><td>Site de documentation</td><td>React + Vite + TypeScript + react-router-dom</td></tr>
             <tr><td>Licence</td><td>MIT</td></tr>
-            <tr><td>Version actuelle</td><td>v2.1.0</td></tr>
+            <tr><td>Version actuelle</td><td>v2.3.0</td></tr>
           </tbody>
         </table>
       </section>
