@@ -4,7 +4,7 @@ export default function Roadmap() {
       <h1>Roadmap</h1>
       <p>Découvrez ce qui est prévu pour les prochaines versions de Scaffolder.</p>
 
-      <h2>Terminé <span className="done-badge">v2.3.0</span></h2>
+      <h2>Terminé <span className="done-badge">v2.4.0</span></h2>
       <ul>
         <li>Interface terminal (TUI) en plein écran : thème sombre, menu F1–F9, assistant IA intégré, catalogue auto de toutes les commandes</li>
         <li>Assistant IA contextuel : connaît le projet courant, les outils et les templates ; propose une commande que tu confirmes</li>
@@ -30,7 +30,7 @@ export default function Roadmap() {
         <li>Sécurité : exécution des processus sans shell, configuration chiffrée, vérification SHA-256 des mises à jour</li>
       </ul>
 
-      <h2>Prochaine version (v2.3.0)</h2>
+      <h2>Prochaine version (v2.4.0)</h2>
       <ul>
         <li>Extension VS Code publiée sur le marketplace</li>
         <li>Support de GitLab CI et Jenkins dans <code>scaffold github actions</code></li>

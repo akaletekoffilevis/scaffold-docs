@@ -6,7 +6,7 @@ export default function Landing() {
       <header>
         <div className="hero">
         <div className="hero-badge">
-          <span className="dot" /> v2.3.0 &middot; .NET 10 &middot; AOT
+          <span className="dot" /> v2.4.0 &middot; .NET 10 &middot; AOT
         </div>
         <img src="/logo.svg" alt="Scaffolder Logo" className="hero-logo" />
         <h1>Scaffolder</h1>
@@ -74,7 +74,7 @@ export default function Landing() {
       </div>
 
       <section className="section">
-        <h2>Nouveaut&eacute;s v2.3.0</h2>
+        <h2>Nouveaut&eacute;s v2.4.0</h2>
         <p className="section-desc">
           La derni&egrave;re version apporte une interface terminal compl&egrave;te,
           un assistant IA contextuel et une interface web r&eacute;&eacute;crite.

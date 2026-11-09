@@ -4,6 +4,21 @@ export default function Changelog() {
       <h1>Changelog</h1>
 
       <article>
+        <h2>v2.4.0</h2>
+        <p><em>9 novembre 2026</em></p>
+        <p>Installation auto des outils, page Commandes web, thème TUI, plus de fournisseurs IA, Kubernetes deploy.</p>
+        <ul>
+          <li>Installation automatique des outils manquants (dotnet, node, cargo, go, python, flutter, composer, git, docker, gh) selon l'OS</li>
+          <li>Page web « Commandes » générée automatiquement depuis le catalogue CLI</li>
+          <li>Thème clair/sombre dans le TUI, page de configuration enrichie</li>
+          <li>Nouveaux fournisseurs IA : Mistral AI, DeepSeek</li>
+          <li>Support Kubernetes dans <code>scaffold deploy</code> (manifests Deployment/Service/Ingress)</li>
+          <li>Page web « Projet » dans le TUI (run, build, test, clean, info, lint, format)</li>
+          <li>RootFactory et CliCatalog partagés entre CLI, TUI et web</li>
+        </ul>
+      </article>
+
+      <article>
         <h2>v2.3.0</h2>
         <p><em>7 novembre 2026</em></p>
         <p>Interface terminal (TUI) complète, assistant IA contextuel, interface web réécrite, sécurité renforcée.</p>

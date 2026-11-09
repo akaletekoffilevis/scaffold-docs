@@ -38,7 +38,7 @@ export default function About() {
             <tr><td>IA intégrée</td><td>OpenAI, Claude, Gemini, Grok</td></tr>
             <tr><td>Site de documentation</td><td>React + Vite + TypeScript + react-router-dom</td></tr>
             <tr><td>Licence</td><td>MIT</td></tr>
-            <tr><td>Version actuelle</td><td>v2.3.0</td></tr>
+            <tr><td>Version actuelle</td><td>v2.4.0</td></tr>
           </tbody>
         </table>
       </section>
