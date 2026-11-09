@@ -37,7 +37,7 @@ export default function Landing() {
         <div className="hero-bg" />
         <div className="hero-content">
           <div className="hero-badge">
-            <Sparkles size={14} /> v2.4.0 &middot; .NET 10 &middot; AOT
+            <Sparkles size={14} /> v2.5.0 &middot; .NET 10 &middot; AOT
           </div>
           <h1>
             Génère, build, déploie.<br />

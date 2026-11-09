@@ -4,6 +4,18 @@ export default function Changelog() {
       <h1>Changelog</h1>
 
       <article>
+        <h2>v2.5.0</h2>
+        <p><em>9 novembre 2026</em></p>
+        <p>TUI amélioré (bordures arrondies, icônes), documentation complète, open source.</p>
+        <ul>
+          <li>Bordures arrondies et icônes dans le TUI pour un look plus moderne</li>
+          <li>Documentation open source complète (README, LICENSE, CONTRIBUTING, SECURITY)</li>
+          <li>Site de documentation refondu (design, SEO, i18n FR/EN)</li>
+          <li>Tous les liens de téléchargement pointent vers la dernière version</li>
+        </ul>
+      </article>
+
+      <article>
         <h2>v2.4.0</h2>
         <p><em>9 novembre 2026</em></p>
         <p>Installation auto des outils, page Commandes web, thème TUI, plus de fournisseurs IA, Kubernetes deploy.</p>
