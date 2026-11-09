@@ -5,8 +5,8 @@ export default function DocsIndex() {
   const sections = [
     { to: '/docs/installation', title: 'Installation', desc: 'Installez Scaffolder sur Linux, macOS ou Windows via binaire, Homebrew ou compilation', icon: '📥' },
     { to: '/docs/getting-started', title: 'Premiers pas', desc: 'Créez, lancez et déployez votre premier projet en 5 minutes avec des exemples concrets', icon: '🚀' },
-    { to: '/docs/commands', title: 'Commandes', desc: 'Référence complète des 40+ commandes organisées en 9 catégories avec options, exemples et search', icon: '⚡' },
-    { to: '/docs/templates', title: 'Templates', desc: 'Catalogue des 18 templates prêts à l\'emploi : webapi, blazor, vite, react, next, django, flutter, laravel et plus', icon: '📦' },
+    { to: '/docs/commands', title: 'Commandes', desc: 'Référence complète des 48 commandes organisées en 9 catégories avec options, exemples et search', icon: '⚡' },
+    { to: '/docs/templates', title: 'Templates', desc: 'Catalogue des templates prêts à l\'emploi : webapi, blazor, vite, react, next, django, flutter, laravel et plus', icon: '📦' },
     { to: '/docs/deployment', title: 'Déploiement', desc: 'Déployez sur Vercel, Railway, Docker ou GitHub Pages en une commande. Détection automatique de la plateforme', icon: '🌍' },
     { to: '/docs/docker', title: 'Docker', desc: 'Génération de Dockerfile multi-stage AOT, .dockerignore et docker-compose.yml pour tout type de projet', icon: '🐳' },
     { to: '/docs/workspace', title: 'Workspace', desc: 'Monorepos avec npm workspaces, solutions .NET et Cargo workspace. Gérez plusieurs projets dans un seul dépôt', icon: '📂' },
@@ -45,7 +45,7 @@ export default function DocsIndex() {
       </div>
       <div className="step-card">
         <h2>3. Explorez</h2>
-        <p>Découvrez les <Link to="/docs/templates">18 templates</Link>, les <Link to="/docs/commands">40+ commandes</Link>, et l'<Link to="/docs/ai">IA intégrée</Link></p>
+        <p>Découvrez les <Link to="/docs/templates">templates</Link>, les <Link to="/docs/commands">48 commandes</Link>, et l'<Link to="/docs/ai">IA intégrée</Link></p>
       </div>
 
       <h2>Par où commencer ?</h2>
