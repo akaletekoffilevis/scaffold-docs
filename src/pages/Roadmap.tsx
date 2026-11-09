@@ -6,14 +6,22 @@ export default function Roadmap() {
 
       <h2>Terminé <span className="done-badge">v2.4.0</span></h2>
       <ul>
-        <li>Interface terminal (TUI) en plein écran : thème sombre, menu F1–F9, assistant IA intégré, catalogue auto de toutes les commandes</li>
+        <li>Interface terminal (TUI) en plein écran : thème sombre/clair, menu F1–F9, assistant IA intégré, catalogue auto de toutes les commandes</li>
         <li>Assistant IA contextuel : connaît le projet courant, les outils et les templates ; propose une commande que tu confirmes</li>
-        <li>Interface web locale réécrite : tableau de bord, nouveau projet, stack, ajout de composants, templates, configuration, IA, statistiques</li>
+        <li>Interface web locale réécrite : tableau de bord, nouveau projet, stack, ajout, templates, configuration, IA, statistiques, page Commandes</li>
         <li>Sécurité renforcée : suppression de <code>/api/run</code>, validation des noms, liste blanche des commandes, anti-CSRF</li>
         <li>Sérialisation JSON sans réflexion (AOT) pour <code>list</code>, <code>stats</code> et <code>doctor --json</code></li>
         <li>Refonte de l'assistant interactif dans <code>scaffold new</code> (filtre actif, étapes adaptées, config .NET uniquement)</li>
         <li>Les outils natifs créent eux-mêmes le dossier du projet</li>
         <li>Migration vers .NET 10 et publication AOT multi-plateforme</li>
+        <li>Installation automatique des outils manquants (dotnet, node, cargo, go, python, flutter, composer, git, docker, gh)</li>
+        <li>Plus de fournisseurs IA : Mistral AI, DeepSeek (en plus d'OpenAI, Claude, Gemini, Grok)</li>
+        <li>Support Kubernetes dans <code>scaffold deploy</code> (manifests Deployment/Service/Ingress)</li>
+        <li>Support GitLab CI et Jenkins dans <code>scaffold ci</code></li>
+        <li>Thème clair/sombre dans le TUI et le web, page de configuration enrichie</li>
+        <li>RootFactory et CliCatalog partagés entre CLI, TUI et web</li>
+        <li>Scripts d'installation automatique (install.sh, install.bat) publiés sur la release</li>
+        <li>Documentation open source complète (README, LICENSE, CONTRIBUTING, SECURITY, templates GitHub)</li>
       </ul>
 
       <h2>Terminé <span className="done-badge">v2.2.0</span></h2>
@@ -30,36 +38,15 @@ export default function Roadmap() {
         <li>Sécurité : exécution des processus sans shell, configuration chiffrée, vérification SHA-256 des mises à jour</li>
       </ul>
 
-      <h2>Prochaine version (v2.4.0)</h2>
+      <h2>Prochaine version (v2.5.0)</h2>
       <ul>
         <li>Extension VS Code publiée sur le marketplace</li>
-        <li>Support de GitLab CI et Jenkins dans <code>scaffold github actions</code></li>
         <li>Amélioration de l'auto-complétion avec suggestions contextuelles</li>
         <li>Mode collaboratif avec partage de templates entre équipes</li>
         <li>Interface graphique desktop avec Tauri</li>
-        <li>Plus de fournisseurs IA : Mistral AI, DeepSeek, Llama 3 local</li>
+        <li>Plus de fournisseurs IA : Llama 3 local</li>
         <li>Analyseur de code avec suggestions d'architecture</li>
         <li>Génération de documentation automatique pour les API</li>
-        <li>Kubernetes support dans <code>scaffold deploy</code></li>
-      </ul>
-
-      <h2>Version v2.4.0</h2>
-      <ul>
-        <li>Support des templates CI/CD (GitHub Actions, GitLab CI, Jenkins) en une commande</li>
-        <li>Marketplace de templates avec système de notation</li>
-        <li>Gestion des secrets et variables d'environnement</li>
-        <li>Mode offline avec cache local des templates</li>
-        <li>Intégration avec les registres de conteneurs (Docker Hub, GHCR)</li>
-      </ul>
-
-      <h2>Version v3.0.0 (grande refonte)</h2>
-      <ul>
-        <li>Noyau modulaire avec architecture plugin-first</li>
-        <li>Support des formats de template universels (Cookiecutter, Yeoman)</li>
-        <li>Éditeur visuel de templates en ligne de commande</li>
-        <li>Génération de projets avec interface graphique (Tauri)</li>
-        <li>Support des monorepos avec détection automatique des relations</li>
-        <li>Mode entreprise avec gestion des droits et audit</li>
       </ul>
 
       <h2>Idées à long terme</h2>
