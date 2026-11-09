@@ -1,72 +1,97 @@
 import { Link } from 'react-router-dom'
 import ContactForm from '../../components/ContactForm'
+import { Download, Rocket, Zap, Package, Globe, Container, FolderTree, BookOpen, Brain, Plug, HelpCircle } from 'lucide-react'
 
 export default function DocsIndex() {
   const sections = [
-    { to: '/docs/installation', title: 'Installation', desc: 'Installez Scaffolder sur Linux, macOS ou Windows via binaire, Homebrew ou compilation', icon: '📥' },
-    { to: '/docs/getting-started', title: 'Premiers pas', desc: 'Créez, lancez et déployez votre premier projet en 5 minutes avec des exemples concrets', icon: '🚀' },
-    { to: '/docs/commands', title: 'Commandes', desc: 'Référence complète des 48 commandes organisées en 9 catégories avec options, exemples et search', icon: '⚡' },
-    { to: '/docs/templates', title: 'Templates', desc: 'Catalogue des templates prêts à l\'emploi : webapi, blazor, vite, react, next, django, flutter, laravel et plus', icon: '📦' },
-    { to: '/docs/deployment', title: 'Déploiement', desc: 'Déployez sur Vercel, Railway, Docker ou GitHub Pages en une commande. Détection automatique de la plateforme', icon: '🌍' },
-    { to: '/docs/docker', title: 'Docker', desc: 'Génération de Dockerfile multi-stage AOT, .dockerignore et docker-compose.yml pour tout type de projet', icon: '🐳' },
-    { to: '/docs/workspace', title: 'Workspace', desc: 'Monorepos avec npm workspaces, solutions .NET et Cargo workspace. Gérez plusieurs projets dans un seul dépôt', icon: '📂' },
-    { to: '/docs/registry', title: 'Registry', desc: 'Découvrez, installez et partagez des templates communautaires. Créez vos propres templates avec template.json', icon: '📚' },
-    { to: '/docs/ai', title: 'Intelligence Artificielle', desc: 'IA intégrée avec OpenAI, Claude, Gemini et Grok. Suggestion, explication, correction d\'erreurs et génération de templates', icon: '🧠' },
-    { to: '/docs/plugins', title: 'Plugins', desc: 'Étendez Scaffolder avec des plugins shell personnalisés. Hooks, système de commandes et marketplace', icon: '🔌' },
-    { to: '/docs/faq', title: 'FAQ', desc: 'Plus de 30 réponses aux questions les plus fréquentes sur l\'installation, l\'utilisation et le dépannage', icon: '❓' },
+    { to: '/docs/installation', title: 'Installation', desc: 'Binaire AOT, install.sh, 7 plateformes', icon: Download },
+    { to: '/docs/getting-started', title: 'Premiers pas', desc: 'Créez et lancez votre premier projet en 5 minutes', icon: Rocket },
+    { to: '/docs/commands', title: 'Commandes', desc: 'Référence complète des 48 commandes', icon: Zap },
+    { to: '/docs/templates', title: 'Templates', desc: 'Catalogue des templates par langage et framework', icon: Package },
+    { to: '/docs/deployment', title: 'Déploiement', desc: 'Vercel, Railway, Docker, GitHub Pages, Kubernetes', icon: Globe },
+    { to: '/docs/docker', title: 'Docker', desc: 'Dockerfile multi-stage AOT et docker-compose', icon: Container },
+    { to: '/docs/workspace', title: 'Workspace', desc: 'Monorepos npm, .NET, Cargo', icon: FolderTree },
+    { to: '/docs/registry', title: 'Registry', desc: 'Templates communautaires et personnels', icon: BookOpen },
+    { to: '/docs/ai', title: 'Intelligence Artificielle', desc: 'OpenAI, Claude, Gemini, Grok, Mistral, DeepSeek', icon: Brain },
+    { to: '/docs/plugins', title: 'Plugins', desc: 'Étendez Scaffolder avec des plugins shell', icon: Plug },
+    { to: '/docs/faq', title: 'FAQ', desc: 'Réponses aux questions fréquentes', icon: HelpCircle },
   ]
 
   return (
     <div className="page-content">
-      <h1>Documentation Scaffolder</h1>
+      <h1>Documentation</h1>
       <p className="lead">
-        Bienvenue dans la documentation complète de <strong>Scaffolder</strong>, le CLI universel de génération de projets.
-        Que vous débutiez ou cherchiez une référence précise, vous trouverez tout ici.
+        Bienvenue dans la documentation de <strong>Scaffolder</strong>, le CLI universel
+        de génération de projets. Que vous débutiez ou cherchiez une référence précise,
+        vous trouverez tout ici.
       </p>
 
-      <div className="grid">
-        {sections.map((s, i) => (
-          <Link to={s.to} key={i} className="card" style={{ textDecoration: 'none' }}>
-            <div className="card-icon">{s.icon}</div>
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
-          </Link>
-        ))}
-      </div>
-
-      <h2>Vous débutez ?</h2>
-      <div className="step-card">
-        <h2>1. Installation</h2>
-        <p>Installez Scaffolder en une ligne : <Link to="/docs/installation">Voir les options</Link></p>
-      </div>
-      <div className="step-card">
-        <h2>2. Premier projet</h2>
-        <p>Générez votre première API REST avec <code>scaffold new --template=webapi --name=mon-api</code></p>
-      </div>
-      <div className="step-card">
-        <h2>3. Explorez</h2>
-        <p>Découvrez les <Link to="/docs/templates">templates</Link>, les <Link to="/docs/commands">48 commandes</Link>, et l'<Link to="/docs/ai">IA intégrée</Link></p>
+      <div className="docs-grid">
+        {sections.map((s, i) => {
+          const Icon = s.icon
+          return (
+            <Link to={s.to} key={i} className="docs-card">
+              <div className="docs-card-icon"><Icon size={20} /></div>
+              <div>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </div>
+            </Link>
+          )
+        })}
       </div>
 
       <h2>Par où commencer ?</h2>
-      <table>
-        <thead>
-          <tr><th>Vous cherchez...</th><th>Par où commencer</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Installer Scaffolder</td><td><Link to="/docs/installation">Guide d'installation</Link></td></tr>
-          <tr><td>Créer un projet rapidement</td><td><Link to="/docs/getting-started">Premiers pas</Link></td></tr>
-          <tr><td>Une commande spécifique</td><td><Link to="/docs/commands">Référence des commandes</Link></td></tr>
-          <tr><td>Un template pour mon langage</td><td><Link to="/docs/templates">Catalogue des templates</Link></td></tr>
-          <tr><td>Déployer mon projet</td><td><Link to="/docs/deployment">Guide de déploiement</Link></td></tr>
-          <tr><td>Configurer Docker</td><td><Link to="/docs/docker">Documentation Docker</Link></td></tr>
-          <tr><td>Une réponse rapide</td><td><Link to="/docs/faq">FAQ</Link></td></tr>
-        </tbody>
-      </table>
+      <div className="quickstart">
+        <div className="qs-step">
+          <div className="qs-num">1</div>
+          <div>
+            <strong>Installer</strong>
+            <code>curl -fsSL .../install.sh | bash</code>
+          </div>
+        </div>
+        <div className="qs-step">
+          <div className="qs-num">2</div>
+          <div>
+            <strong>Créer</strong>
+            <code>scaffold new webapi --name=mon-api</code>
+          </div>
+        </div>
+        <div className="qs-step">
+          <div className="qs-num">3</div>
+          <div>
+            <strong>Lancer</strong>
+            <code>cd mon-api &amp;&amp; dotnet run</code>
+          </div>
+        </div>
+      </div>
 
       <h2>Une question ?</h2>
-      <p>Vous ne trouvez pas ce que vous cherchez ? Consultez la <Link to="/docs/faq">FAQ</Link> ou contactez-nous directement :</p>
+      <p>Consultez la <Link to="/docs/faq">FAQ</Link> ou contactez-nous :</p>
       <ContactForm />
     </div>
   )
 }
+EOF
+# Add docs-grid CSS
+cat >> src/App.css <<'EOF'
+
+/* === Docs grid === */
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px; margin: 24px 0 40px;
+}
+.docs-card {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 18px; border-radius: var(--radius);
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  text-decoration: none; color: var(--text);
+  transition: all var(--transition); backdrop-filter: blur(8px);
+}
+.docs-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-md); text-decoration: none; }
+.docs-card-icon { width: 36px; height: 36px; border-radius: var(--radius-sm); background: var(--accent-glow); color: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.docs-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+.docs-card p { color: var(--text2); font-size: .85rem; line-height: 1.5; margin: 0; }
+EOF
+npx tsc -b --noEmit 2>&1 | tail -3; echo "EXIT=${PIPESTATUS[0]}"
